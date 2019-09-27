@@ -1,8 +1,8 @@
 title: Catetan Bocah Ngoprek
 description: My Personal Ngoprek Problems
-author: Catetan Ngoprek ~
+author: Muhammad Naufal Ammar
 github: https://github.com/ammarun11
-about: I'm Junior sysadmin  interesting about Serverless,Cloud,Infra & Programming.
+about: I'm Junior sysadmin  interesting about Serverless,Cloud Infrastructure & Programming.
 disqus_shortname: ngoprek
 google_analytics: UA-XXXXXXXX-Y
 
@@ -20,7 +20,7 @@ social:
     - icon: fa-twitter
       link: "#"
     - icon: fa-linkedin
-      link: "#"
+      link: "https://www.linkedin.com/in/muhammad-naufal-ammar-6b1b92126/"
     - icon: fa-stack-exchange
       link: "#"
     - icon: fa-github
