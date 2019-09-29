@@ -53,7 +53,7 @@ Untuk mendaftar dibutuhkan email academy saja misal saya menggunakan email dari 
 ![Azure-claim](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/Azure-Claim.png)
 
 -----
-**Dan Selamat akun Azure For Student kalian telah aktiv dan mendapatkan creit $100 dengan durasi pemakaian selama 1 tahun.**
+**Dan Selamat akun Azure For Student kalian telah aktiv dan mendapatkan credit $100 dengan durasi pemakaian selama 1 tahun.**
 
 ![Azure-ACC](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/Azure-ACC.png)
 
