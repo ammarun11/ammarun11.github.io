@@ -29,13 +29,18 @@ Untuk mendaftar dibutuhkan email academy saja misal saya menggunakan email dari 
 
 `Berikut adalah langkah pembuatan akun Azure:`
 
- **1.** Lakukan Sign In Terlebih dahulu menggunakan email apa saja
- Pada web browser, buka halaman [https://azure.microsoft.com/id-id/free/students/](https://azure.microsoft.com/id-id/free/students/) Pada halaman ini kita harus sign in terlebih dahulu dengan email biasa.
+ **1.** Buka Halaman page berikut [https://azure.microsoft.com/id-id/free/students/](https://azure.microsoft.com/id-id/free/students/) Pada halaman ini kita harus sign in terlebih dahulu dengan email biasa.
 
 
-**2.**  lalu akan kembali ke tampilan awal dan pilih Active Now dan akan di minta memasukkan email academy atau institusi pendidikan.
+**2.**  lalu akan kembali ke tampilan awal dan pilih `Active Now` dan akan di minta memasukkan email academy atau institusi pendidikan.
 
 ![Azire-active](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/Azure-active.png)
+
+**3.** Pilih method dengan `School email address` lalu kita isikan email institusi pendidikan yang aktiv. 
+
+![Azure-Email](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/Azure-email.png)
+
+**4.** Setelah itu kita 
 
 
 
