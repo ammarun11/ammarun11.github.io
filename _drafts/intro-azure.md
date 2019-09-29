@@ -8,7 +8,7 @@ categories: [ngoprek, server, cloud]
 
 ---
 
-Kenapa saya harus belajar kelas Menjadi Azure Cloud Developer?
+Kenapa saya harus belajar kelas Menjadi Azure Cloud Developer di Era ini?
 - Cloud computing merupakan #1 hard skill yang paling dibutuhkan di era industri 4.0 ini banyak perusahaan yang tertarik dengan engineer yang bisa menghandle tekonologi cloud ini [(Sumber)](https://learning.linkedin.com/blog/top-skills/the-skills-companies-need-most-in-2019--and-how-to-learn-them).
 
 - Microsoft Azure luas digunakan di lebih dari 140 negara. You Know This MICROSOFT Dude ~.
@@ -40,7 +40,7 @@ Oke Sekian mungkin cukup segitu aja penjelasannya selebihnya bisa kalian baca ba
 
 Next, Kita bakal ngoprek Azure dengan tier trial atau yang gratis ajee ye :v 
 
-Next Bacaan > [Free Trial Azure For Stuendt ](https://learning.linkedin.com/blog/top-skills/the-skills-companies-need-most-in-2019--and-how-to-learn-them)
+`Next Bacaan >` [Free Trial Azure For Students ](https://learning.linkedin.com/blog/top-skills/the-skills-companies-need-most-in-2019--and-how-to-learn-them)
 
 
 
