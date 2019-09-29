@@ -32,7 +32,10 @@ Untuk mendaftar dibutuhkan email academy saja misal saya menggunakan email dari 
  **1.** Lakukan Sign In Terlebih dahulu menggunakan email apa saja
  Pada web browser, buka halaman [https://azure.microsoft.com/id-id/free/students/](https://azure.microsoft.com/id-id/free/students/) Pada halaman ini kita harus sign in terlebih dahulu dengan email biasa.
 
+
 **2.**  lalu akan kembali ke tampilan awal dan pilih Active Now dan akan di minta memasukkan email academy atau institusi pendidikan.
+
+![Azire-active](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/Azure-active.png)
 
 
 
