@@ -40,7 +40,7 @@ Oke Sekian mungkin cukup segitu aja penjelasannya selebihnya bisa kalian baca ba
 
 Next, Kita bakal ngoprek Azure dengan tier trial atau yang gratis ajee ye :v 
 
-`Next Bacaan >` [Free Trial Azure For Students ](https://learning.linkedin.com/blog/top-skills/the-skills-companies-need-most-in-2019--and-how-to-learn-them)
+`Next Bacaan >` [Membuat Akun Azure For Students ](https://ammarun11.github.io/ngoprek/server/cloud/2019/09/29/azure-for-student.html)
 
 
 
