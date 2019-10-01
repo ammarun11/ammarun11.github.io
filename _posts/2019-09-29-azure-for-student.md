@@ -10,7 +10,6 @@ categories: [ngoprek, server, cloud]
 
 Pada tahap ini kita akan mencoba membuat akun Azure dengan tier free trial nya yang gratis. namun menggunakan Azure for students karena tidak butuh CC (Credit Card) dan mendapatkan $100 dan durasinya selamat 1 tahun setelah habis subscription Azure for students akan di disabled dan akan di arahkan untuk menggunakan subscription Pay-As-You-GO.
 
-
 sebenarnya ada cara lain yang mendapatkan lebih besar tier free trial nya tetapi dia menggunakan credit card. nah ini solusinya bagi saya sendiri dan para pelajar dan mahasiswa yang ingin terus ngoprek secara gratisan :v
 
 mungkin kekurangannya kita tidak bisa membangun infrastrucutre yang membutuhkan environtment dengan spek tinggi namun dengan Azure for students ini sudah cukup untuk memperlajari service apa saja yang ada di 
@@ -60,7 +59,3 @@ Untuk mendaftar dibutuhkan email academy saja misal saya menggunakan email dari 
 # Enjoy Happy ngoprek ~
 
 Next bacaan kita akan ngoprek lebih lanjut si Microsoft Azure ini ~
-
-
-
-
