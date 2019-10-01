@@ -81,6 +81,7 @@ FastEthernet 0/1
 ```
 
 Setelah dilakukan Routing, berikut Routing Table nya.
+
 ![static-staticextint](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/static-hasilextint.png)
 
 > Sudah saling terhubung, silahkan masukan IP Address pada PC lalu lakukan test ping yang berbeda network.
@@ -89,7 +90,7 @@ Setelah dilakukan Routing, berikut Routing Table nya.
 
 ###  Lab 2 Static Routing with Next Hop
 
-![static-nexthop](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/nexthop.png)
+![static-nexthop](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/static-nexthop.png)
 
 Masih menggunakan topologi seperti sebelumnya, untuk konfigurasi IP Address sama. Tetapi kita sekarang menggunakan Next-Hop. Pertama hapus terlebih dahulu Static Routing sebelumnya.
 
@@ -135,7 +136,7 @@ Router2(config)#ip route 100.100.100.0 255.255.255.0
 
 ###  Lab 3 Static Routing with  Exit Interface and Next-Hop
 
-![static-nexthop](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/static-extandnexthop)
+![static-nexthopextint](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/static-extandnexthop.png)
 
 Masih menggunakan topologi seperti sebelumnya, pengetesanya sama seperti
 sebelumnya. Tetapi LAB ini belum support di Cisco Packet Tracer, yang penting paham terlebih
