@@ -1,5 +1,5 @@
 ---
-layout : draft
+layout : post
 title : "[Cisco] Dynamic Routing "
 categories : [network, cisco, routing]
 ---
