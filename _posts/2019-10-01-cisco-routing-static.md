@@ -20,7 +20,7 @@ membangun jaringan usahakan jika routernya belum terlalu banyak jangan terburu â
 
 - `Next Hop`  :  Next-Hop : Perbedaannya dengan Exit Interface adalah Cuma untuk Next â€“Hop ini memasukan IP yang directly connect dengan Router.
 
-- `Exit Interface an Next Hop ` : Gabungan dari Exit Interface dan Next-Hop. Konfigurasinya juga gabungan dari Exit Interface dan Next-Hop.
+- `Exit Interface dan Next Hop ` : Gabungan dari Exit Interface dan Next-Hop. Konfigurasinya juga gabungan dari Exit Interface dan Next-Hop.
 
 --- 
 
