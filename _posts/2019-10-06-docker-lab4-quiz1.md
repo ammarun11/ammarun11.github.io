@@ -67,10 +67,11 @@ Run Test Kalkulator
 root@pod0:~/kalkulator# docker build -t kalkulatorpalo .
 root@pod0:~/kalkulator# docker run -d -p 4000:80 kalkulatorpalo
 root@pod0:~/kalkulator# curl localhost:4000
+```
 
 Test On browser dengan Tunneling Web
-```
-![Docker-kalkulator](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/docker-kalkulator.png)
+
+![docker-kalkulator](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/docker-kalkulator.png)
 
 #### 2. Push image kalkulatorpalo 1 ke docker hub
 Docker Login
