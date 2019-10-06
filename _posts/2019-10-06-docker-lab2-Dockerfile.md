@@ -20,7 +20,7 @@ Lab selanjutnya kita akan mencoba untuk menjalankan Docker container dengan meng
 ```BASH
 sudo docker run docker/whalesay cowsay palopalepalo
 ```
-![docker-whalesay]()
+![docker-whalesay](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/docker-whalesay.png)
 
 ---
 

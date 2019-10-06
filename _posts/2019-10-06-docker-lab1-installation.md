@@ -35,7 +35,7 @@ sudo apt -y install docker.io
 sudo systemctl status docker
 sudo docker version
 ```
-![docker-version]()
+![docker-version](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/docker_version.png)
 
 #### 2. Uji instalasi docker
 
@@ -50,7 +50,7 @@ sudo docker container ls -a
 sudo docker container ls -a
 ```
 
-![Docker-Run]()
+![Docker-Run](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/docker-run.png)
 
 
 # Enjoy Happy Ngoprek ~
