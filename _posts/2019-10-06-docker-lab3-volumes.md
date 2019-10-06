@@ -145,7 +145,7 @@ sudo docker volume create --driver vieux/sshfs -o sshcmd=root@10.1.40.18:/share 
 root@pod0:~# sudo docker run -d --name=nginxtest-ssh -p 8090:80 -v sshvolume:/usr/share/nginx/html nginx:latesta3b6f5ea53b4768802bbcd6480a1206eece95e5f2de6295ee4b07f743d9bb194
 ```
 
-#### 8. SSH ke podX-node1.
+#### 8. SSH ke pod-pod1.
 ```BASH
 ssh -l root 10.1.40.18
 sudo sh -c "echo 'Hello, I am palopalepalo' > /share/index.html"

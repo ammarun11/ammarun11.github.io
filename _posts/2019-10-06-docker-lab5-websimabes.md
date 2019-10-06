@@ -42,7 +42,7 @@ docker run --name phpmyadminpalo -d -e PMA_HOST=10.1.40.18 -p 8044:80 phpmyadmin
 ```
 Test On Browser dengan di tunnel dengan login akun mysql yang kita telah buat di pod-pod1.
 
-![docker-phpmyadmin]()
+![docker-phpmyadmin](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/docker-phmyadmin.png)
 
 ---
 
@@ -74,7 +74,7 @@ Edit Script koneksi.php sesuaikan dengan database kita.
 Import script simabes_example.sql
 ke mysql pod-pod1 dengan phpmyadmin
 
-![Docker-mysql]()
+![Docker-mysql](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/docker-mysql.png)
 
 tabel database untuk web simabes akan otomatis ter import ke database kita.
 
@@ -144,6 +144,6 @@ root@pod0:~# docker run -d -p 9191:80 simabespalo
 ```
 Lalu jalankan di web browser dengan cara tunneling 
 
-![Docker-simabes]()
+![Docker-simabes](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/Docker-simabes.png)
 
 # Enjoy Happy Ngoprek ~
