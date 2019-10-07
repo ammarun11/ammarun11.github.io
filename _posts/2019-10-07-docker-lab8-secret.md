@@ -1,6 +1,6 @@
 ---
 layout : post
-title : "[Docker] Docker Secret Lab Docker (Part 7)"
+title : "[Docker] Docker Secret Lab Docker (Part 8)"
 categories: [ngoprek, server, cloud, docker, container]
 ---
 # بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
