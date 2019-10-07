@@ -170,7 +170,7 @@ docker-compose up -d
 ```
 Uji browsing dengan cara tunelling
 
-![compose-app](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/compose-apps.png)
+![compose-app](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/compose-app.png)
 
 Menampilkan compose aktif & Menampilkan environment variable di service web
 ```BASH
