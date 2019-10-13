@@ -1,6 +1,6 @@
 ---
 layout : post
-title : "[Kubernetes] Deploying Stand-alone app Lab k8s (Part 5)"
+title : "[Kubernetes] Deploying Stand-alone app With CLI Lab k8s (Part 5)"
 categories: [ngoprek, server, cloud, docker, container, orchestration]
 ---
 # بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
