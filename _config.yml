@@ -38,7 +38,7 @@ urls:
     - text: XML Feed
       url: /feed.xml
 
-url: "https://ammarun11.github.io"
+url: "https://ammarun.my.id"
 baseurl: ""
 paginate: 20
 per_page: 20
