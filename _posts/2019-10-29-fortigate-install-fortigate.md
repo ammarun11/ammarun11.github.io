@@ -127,9 +127,8 @@ Kita telah mengkonfigurasi FortiGate dengan menggunakan media GNS3 Lab selanjutn
 
 
 **Referensi**
-* https://docs.gns3.com/appliances/fortigate.html
-* https://help.fortinet.com/fos50hlp/52data/Content/FortiOS/fortigate-system-administration-52/The%20CLI/using_cli.htm
-* https://www.linkedin.com/pulse/fortigate-inside-gns3-cli-web-access-issa-itani/
-
+* [https://docs.gns3.com/appliances/fortigate.html](https://docs.gns3.com/appliances/fortigate.html)
+* [https://help.fortinet.com/fos50hlp/52data/Content/FortiOS/fortigate-system-administration-52/The%20CLI/using_cli.htm](https://help.fortinet.com/fos50hlp/52data/Content/FortiOS/fortigate-system-administration-52/The%20CLI/using_cli.htm)
+* [https://www.linkedin.com/pulse/fortigate-inside-gns3-cli-web-access-issa-itani/](https://www.linkedin.com/pulse/fortigate-inside-gns3-cli-web-access-issa-itani/)
 
 # Happy Enjoy ngoprek~
