@@ -84,8 +84,8 @@ tail -f /var/log/td-agent/td-agent.log
 
 hasil uji coba log 
 ```BASH
-root@pod03-node1:~# curl -X POST -d 'json={"json":"message"}' http://localhost:8888/debug.test
-root@pod03-node1:~# tail -f /var/log/td-agent/td-agent.log
+root@pod03-node0:~# curl -X POST -d 'json={"json":"message"}' http://localhost:8888/debug.test
+root@pod03-node0:~# tail -f /var/log/td-agent/td-agent.log
 2019-11-09 10:30:10 +0000 [warn]: #0 [output_td] secondary type should be same with primary one primary="Fluent::Plugin::TreasureDataLogOutput" secondary="Fluent::Plugin::FileOutput"
 2019-11-09 10:30:10 +0000 [info]: adding match pattern="debug.**" type="stdout"
 2019-11-09 10:30:10 +0000 [info]: adding source type="forward"
