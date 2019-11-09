@@ -34,7 +34,7 @@ categories: [ngoprek, cloud , log, cloud native]
 ## Environtment yang saya gunakan disini yaitu public cloud milik `Microsoft Azure`.
 
 
-![fluentd-topologi](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/03-fl-adm-A.png)
+![fluentd-topologi](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/3-fl-adm-A.png)
 
 ## !! Ekseskusi di node0 !! ##
 
