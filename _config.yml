@@ -48,8 +48,6 @@ gems:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-seo-tag
-
-plugins:
   - jekyll-sitemap
 
 compress_html:

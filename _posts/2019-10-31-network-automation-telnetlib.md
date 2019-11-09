@@ -1,6 +1,6 @@
 ---
 layout : post
-title : "[Telnetlib] Konfigurasi Router Cisco dengan telnetlib python"
+title : "[Cisco] Konfigurasi Router Cisco dengan telnetlib python"
 categories: [ngoprek, automation, routing , cisco]
 ---
 # بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
