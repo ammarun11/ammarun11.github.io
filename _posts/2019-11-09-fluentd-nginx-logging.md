@@ -40,7 +40,7 @@ sudo systemctl restart td-agent.service
 Jalankan Container dengan perintah berikut
 
 ```BASH
-sudo docker run -d --log-driver=fluentd --log-opt tag="docker.{{.ID}}" nginx:latest echo 'Iki buat Latihan Lur' -p 9000:9000
+sudo docker run -d -p 9000:80 --log-driver=fluentd nginx:latest
 ```
 
 Hasil log nya.
