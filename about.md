@@ -4,17 +4,17 @@ title: About
 permalink: /about/
 ---
 
-* [About Justin Rentie](#about-justin-rentie)
+* [About Muhammad Naufal Ammar](#about-muhammad-naufal-ammar)
     * [Online Resume](/resume/)
 * [About This Blog](#about-this-blog)
 
-# About Justin Rentie #
+# About Muhammad Naufal Ammar #
 ---
 ![image-left]({{ '/images/professional-headshot.jpg' | absolute_url }}){: .align-left}
 
-My name is Justin Rentie. I was born in Palisade, Colorado where I lived for the first 17 years of my life. After high school I decided to pursue Computer Science at Colorado State University in Fort Collins, Colorado.
+My name is Muhammad Naufal Ammar. I was born in Bekasi,
 
-I graduated from C.S.U. in the spring 2018 semester with a degree in [Computer Science with a concentration in Human Centered Computing](https://www.cs.colostate.edu/cstop/csacademics/csdegrees/csbachelors/hccmajor.php).  
+<!-- I graduated from C.S.U. in the spring 2018 semester with a degree in [Computer Science with a concentration in Human Centered Computing](https://www.cs.colostate.edu/cstop/csacademics/csdegrees/csbachelors/hccmajor.php).  
 
 I am currently employed as a full time software developer at [Open Water Foundation](http://openwaterfoundation.org/) where I am primarily focused on java development for data processing tools as well as web development which includes creating online visualizations for collected water data.
 
@@ -38,4 +38,4 @@ The purpose of this blog is to document the things I've learned either through w
 
 *By no means am I claiming to be an expert in any of these topics*.
 
-Most of the information I gather and document will most likely be easily found in other parts of the internet. As I mention above the main focus of this blog is to help myself get better at coding and documenting, and also act as a source of reference to return to in future. Regardless, I hope this blog can act as a source of information and learning for myself, as well as others. Thank you for checking out this blog, I hope you enjoy it as I develop it further.
+Most of the information I gather and document will most likely be easily found in other parts of the internet. As I mention above the main focus of this blog is to help myself get better at coding and documenting, and also act as a source of reference to return to in future. Regardless, I hope this blog can act as a source of information and learning for myself, as well as others. Thank you for checking out this blog, I hope you enjoy it as I develop it further. -->

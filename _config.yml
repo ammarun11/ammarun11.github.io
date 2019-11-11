@@ -17,11 +17,11 @@ remote_theme: mmistakes/so-simple-theme
 local: en-US
 title: My Personal Ngoprek Problems >_
 email: naufalammarun11@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description:
   My name is Ammar and this is my personal blog, documenting my journey
   on the quest to become the best person I can be.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ammarun.my.id" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/images/code-logo.svg"
 date_format: "%B %-d, %Y"
 read_time: true
@@ -32,9 +32,12 @@ google_fonts:
     weights: "400,400i,700,700i"
   - name: "Lora"
     weights: "400,400i,700,700i"
-google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
+google_analytics: UA-148949117-1
 disqus:
-  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
+  shortname: masalahngoprek
+google_site_verification : "zKB-7_EmphHj7Wpc-lRmu7BjIVPWRvMJkoqWQQBSjEI"
+
+
 
 paginate: 10
 paginate_path: /page:num/
@@ -46,6 +49,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
+
+# Search
+search_full_content: false
+
 
   # Site Author
 author:

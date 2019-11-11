@@ -3,9 +3,9 @@ layout: page
 title: Online Résumé
 permalink: /resume/
 ---
-# Justin Rentie #
+# Muhammad Naufal Ammar #
 ---
-356 Plowman Way | Fort Collins, Colorado | 80526  
+<!-- 356 Plowman Way | Fort Collins, Colorado | 80526  
 [jurentie@gmail.com](mailto:jurentie@gmail.com)  
 [LinkedIn](https://www.linkedin.com/in/jurentie) | [GitHub](https://github.com/jurentie) | [Twitter](https://twitter.com/JustinRentie)
 
@@ -54,4 +54,4 @@ permalink: /resume/
 [Colorado State University, Fort Collins, CO](https://www.colostate.edu/)  
 [Bachelor of Science, Computer Science/Concentration: Human-Centered Computing ](https://www.cs.colostate.edu/cstop/csacademics/csdegrees/csbachelors/hccmajor.php)  
 GPA: 3.232  
-Graduation: Spring 2018
+Graduation: Spring 2018 -->
