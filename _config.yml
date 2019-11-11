@@ -37,10 +37,16 @@ disqus:
   shortname: masalahngoprek
 google_site_verification : "zKB-7_EmphHj7Wpc-lRmu7BjIVPWRvMJkoqWQQBSjEI"
 
-
-
+# Pagination - https://jekyllrb.com/docs/pagination/
+# paginate: true
 paginate: 10
 paginate_path: /page:num/
+
+# Collections
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:path/
 
 # Build settings
 markdown: kramdown
