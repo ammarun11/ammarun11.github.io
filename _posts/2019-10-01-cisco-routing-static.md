@@ -30,7 +30,7 @@ membangun jaringan usahakan jika routernya belum terlalu banyak jangan terburu â
 
 * **Berikut Konfigurasi Router 1**
 
-```BASH
+``` BASH
 Router>enable
 Router#configure terminal
 Enter configuration commands, one per line. End with CNTL/Z.
