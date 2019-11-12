@@ -48,10 +48,17 @@ root@pod03-node0:~# curl localhost
 **lalu di tail file log milik apache**
 
 ```BASH
-root@pod03-node0:~# tail /var/log/apache2/access.log
-127.0.0.1 - - [09/Nov/2019:13:26:44 +0000] "GET / HTTP/1.1" 200 11173 "-" "curl/7.58.0"
-127.0.0.1 - - [09/Nov/2019:13:27:36 +0000] "GET / HTTP/1.1" 200 11173 "-" "curl/7.58.0"
-127.0.0.1 - - [09/Nov/2019:13:27:38 +0000] "GET / HTTP/1.1" 200 11173 "-" "curl/7.58.0"
+root@pod03-node0:~# tail -f /var/log/td-agent/td-agent.log 
+2019-11-12 03:57:15 +0000 [warn]: #0 'pos_file PATH' parameter is not set to a 'tail' source.
+2019-11-12 03:57:15 +0000 [warn]: #0 this parameter is highly recommended to save the position to resume tailing.
+2019-11-12 03:57:15 +0000 [info]: #0 starting fluentd worker pid=3203 ppid=3195 worker=0
+2019-11-12 03:57:15 +0000 [info]: #0 following tail of /var/log/apache2/access.log
+2019-11-12 03:57:15 +0000 [info]: #0 [input_debug_agent] listening dRuby uri="druby://127.0.0.1:24230" object="Fluent::Engine" worker=0
+2019-11-12 03:57:15 +0000 [info]: #0 [input_forward] listening port port=24224 bind="0.0.0.0"
+2019-11-12 03:57:15 +0000 [info]: #0 fluentd worker is now running worker=0
+2019-11-12 03:57:25.000000000 +0000 apache.access: {"host":"10.0.0.20","user":null,"method":"GET","path":"/","code":200,"size":11173,"referer":null,"agent":"curl/7.58.0"}
+2019-11-12 03:57:27.000000000 +0000 apache.access: {"host":"10.0.0.20","user":null,"method":"GET","path":"/","code":200,"size":11173,"referer":null,"agent":"curl/7.58.0"}
+2019-11-12 03:57:31.000000000 +0000 apache.access: {"host":"127.0.0.1","user":null,"method":"GET","path":"/","code":200,"size":11173,"referer":null,"agent":"curl/7.58.0"}
 ```
 
 # Happy Enjoy ngoprek~
