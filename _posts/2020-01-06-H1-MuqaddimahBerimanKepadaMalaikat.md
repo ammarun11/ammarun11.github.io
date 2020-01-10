@@ -55,4 +55,4 @@ Di kota Al-Madīnah
 
 Ditranskrip oleh: Tim Transkrip BiAS
 
-# Keep Humble~
+# Keep Humble ~
