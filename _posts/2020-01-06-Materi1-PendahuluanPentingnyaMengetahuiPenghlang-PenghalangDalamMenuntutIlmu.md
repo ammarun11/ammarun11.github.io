@@ -24,4 +24,4 @@ Demikian yang bisa disampaikan, سُبْحَانَكَ اللَّهُمَّ وَ
 
 Halaqah yang pertama dari Halaqah Silsilah ‘Ilmiyyah yang ke enam Beriman Dengan Malaikat Allāh 
 
-# Stay Humble ~
+# Keep Humble ~

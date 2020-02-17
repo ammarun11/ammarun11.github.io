@@ -32,4 +32,4 @@ karena `ilmu` itu keutamannya baru bisa diraih kalau diniatkan secara ikhlas han
 
 Demikian yang bisa disampaikan, سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ ، أشْهَدُ أنْ لا إلهَ إِلاَّ أنْتَ ، أسْتَغْفِرُكَ وَأَتُوبُ إلَيْكَ
 
-# Stay Humble~
+# Keep Humble ~

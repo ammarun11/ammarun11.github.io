@@ -23,11 +23,12 @@ sudo systemctl status docker
 ### Add td-agent.conf
 ```BASH
 sudo vim /etc/td-agent/td-agent.conf
----
+
 <match docker.*>
    @type stdout
 </match>
----
+```
+```bash
 sudo systemctl restart td-agent.service
 ```
 
