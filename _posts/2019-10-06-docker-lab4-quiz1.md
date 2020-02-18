@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Docker] Web Kalkulator Lab Docker (Part 4)"
 categories: [ngoprek, server, cloud, docker, container]
 ---
@@ -18,7 +18,7 @@ Jadi sini kita akan ngorep 2 web sekaligus !
 
 #### 1. Buat Dockerfile untuk menjalankan aplikasi yang bersumber dari [https://github.com/rivawahyuda/kalkulator](https://github.com/rivawahyuda/kalkulator)
 
-```BASH
+```shell
 root@pod0:~/kalkulator# nano Dockerfile 
 
 FROM ubuntu:latest
@@ -63,7 +63,7 @@ CMD /usr/sbin/apache2ctl -D FOREGROUND
 ```
 
 Run Test Kalkulator 
-```BASH
+```shell
 root@pod0:~/kalkulator# docker build -t kalkulatorpalo .
 root@pod0:~/kalkulator# docker run -d -p 4000:80 kalkulatorpalo
 root@pod0:~/kalkulator# curl localhost:4000
@@ -75,7 +75,7 @@ Test On browser dengan Tunneling Web
 
 #### 2. Push image kalkulatorpalo 1 ke docker hub
 Docker Login
-```BASH
+```shell
 root@pod0:~/kalkulator# docker login
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
 Username: palopalepalo
@@ -86,7 +86,7 @@ https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 
 Login Succeeded 
 ```
-```BASH
+```shell
 root@pod0:~/kalkulator# sudo docker tag kalkulatorpalo palopalepalo/kalkulatorpalo:quiz1
 root@pod0:~/kalkulator# sudo docker push palopalepalo/kalkulatorpalo:quiz1
 The push refers to repository [docker.io/palopalepalo/kalkulatorpalo]

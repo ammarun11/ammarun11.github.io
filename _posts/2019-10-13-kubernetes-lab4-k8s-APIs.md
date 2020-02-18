@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Kubernetes] APIs Proxy Lab k8s (Part 4)"
 categories: [ngoprek, server, cloud, docker, container, orchestration]
 ---
@@ -12,11 +12,11 @@ Oke lab ini kita akan mencoba APIs.
 ## APIs Dengan Proxy
 
 Jalankan proxy 
-```BASH
+```shell
 kubectl proxy &
 ```
 Test akses API
-```BASH
+```shell
 curl http://127.0.0.1:8001/
 
 root@pod-master :~# curl http://127.0.0.1:8001/
@@ -104,22 +104,22 @@ root@pod-master :~# curl http://127.0.0.1:8001/
 ```
 
 Matikan proxy
-```BASH
+```shell
 ps -aux | grep kubectl
 kill [PID kubectl proxy]
 ```
 
 ## APIs Tanpa Proxy #####
 ### 1. Get the API Server endpoint 
-```BASH
+```shell
 APISERVER=$(kubectl config view | grep server | cut -f 2- -d ":" | tr -d " ")
 ```
 ### 2. Get the token 
-```BASH
+```shell
 TOKEN=$(kubectl describe secret $(kubectl get secrets | grep default | cut -f1 -d ' ') | grep -E '^token' | cut -f2 -d':' | tr -d '\t')
 ```
 ### 3. Access the API Server using the curl command, as shown below
-```BASH
+```shell
 curl $APISERVER/api --header "Authorization: Bearer $TOKEN" --insecure
 ```
 

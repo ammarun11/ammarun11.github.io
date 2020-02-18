@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title : "[Azure] Introducing Microsoft Azure"
 categories: [ngoprek, server, cloud]
 ---

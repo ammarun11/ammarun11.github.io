@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Python Simple Ciphertext"
 date:   2016-05-21 14:32:04 +0700
 categories: [python, security]

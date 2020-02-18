@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Fluentd] Monitoring fluentd to prometheus Lab Fluentd"
 categories: [ngoprek, cloud , log, cloud native]
 ---
@@ -13,11 +13,11 @@ categories: [ngoprek, cloud , log, cloud native]
 
 ## !! Ekseskusi di node0 !!
 ### Install prometheus plugin
-```BASH
+```shell
 sudo td-agent-gem install fluent-plugin-prometheus
 ```
 ### Tambahkan konfigurasi td-agent.conf
-```BASH
+```shell
 sudo vim /etc/td-agent/td-agent.conf
 
 ---
@@ -51,7 +51,7 @@ sudo systemctl restart td-agent.service
 ## !! Eksekusi di Node 1 !!
 
 ### Install prometheus 
-```BASH
+```shell
 sudo -i
 
 cd /opt
@@ -63,7 +63,7 @@ tar xvfz prometheus-2.9.2.linux-amd64.tar.gz
 cd prometheus-2.9.2.linux-amd64
 ```
 Tambahkan text berikut untuk target fluentd yang ada di node0
-```BASH
+```shell
 vim prometheus.yml
 ---
   - job_name: 'fluentd'
@@ -81,7 +81,7 @@ vim prometheus.yml
 
 
 ### Lakukan curl metrics fluentd ke ip Node0
-```BASH
+```shell
 curl http://[10.0.0.10]:24231/metrics
 
 root@pod03-node1:~# curl 10.0.0.10:24231/metrics
@@ -92,12 +92,12 @@ root@pod03-node1:~# curl 10.0.0.10:24231/metrics
 # Eksekusi di Node0
 
 ### Jalankan container docker
-```bash
+```shell
 sudo docker run -ti --name test --log-driver=fluentd --log-opt tag="docker.{{.ID}}" ubuntu /bin/bash
 ```
 
 ### Masukan perintah
-```BASH
+```shell
 echo 1
 echo 2
 echo "Hallo, Nolsatu 03"
@@ -114,7 +114,7 @@ Klik execute
 ![fluentd-graph](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/3-fl-adm-M.png)
 
 Hasil log nya.
-```BASH
+```shell
 root@pod03-node0:~# tail -f /var/log/td-agent/td-agent.log
 
 

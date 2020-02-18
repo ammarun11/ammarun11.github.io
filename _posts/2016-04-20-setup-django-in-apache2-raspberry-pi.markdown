@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Setup Django in apache2 Raspberry Pi"
 date:   2016-04-20 22:32:34 +0700
 categories: [django, raspberry]

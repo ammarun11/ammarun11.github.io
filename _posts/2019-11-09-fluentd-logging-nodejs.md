@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Fluentd] Logging NodeJS Lab Fluentd"
 categories: [ngoprek, cloud , log, cloud native]
 ---
@@ -16,7 +16,7 @@ categories: [ngoprek, cloud , log, cloud native]
 * Node.js 6.0 or higher
 
 ### Install NodeJS
-```BASH
+```shell
 sudo apt install npm
 nodejs -v
 ```
@@ -36,11 +36,11 @@ vim package.json
 ---
 ```
 **Install dependecies dengan perintah**
-```BASH
+```shell
 npm install
 ```
 
-```BASH
+```shell
 sudo vim /etc/td-agent/td-agent.conf
 ---
 <source>
@@ -81,17 +81,17 @@ app.listen(port, function() {
 ```
 
 jalankan script inde.js
-```BASH
+```shell
 node index.js
 ```
 
 akses `http://10.0.0.10:3000/` menggunakan browser atau dengan curl ke port tersebut,
 lalu log dengan perintah.
-```BASH
+```shell
 tail -f /var/log/td-agent/td-agent.log
 ```
 Hasil
-```BASH
+```shell
 root@pod03-node0:~# curl http://10.0.0.10:3000/
 Hello World!# 
 

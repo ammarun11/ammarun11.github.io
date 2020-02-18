@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Docker] Web Simabes Lab Docker (Part 5)"
 categories: [ngoprek, server, cloud, docker, container]
 ---
@@ -14,7 +14,7 @@ Oke meneruskan lab sebelumnya dimana kita membangun web kalkulator sekarang kita
 
 #### Ekseskusi di `pod-pod1`
 #### 1. Setting up mysql server
-```BASH
+```shell
 nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 **Cari bind-address ganti nilainya dari 127.0.0.1 menjadi 0.0.0.0 atau langsung menggunakan IP address dari server.**
@@ -22,11 +22,11 @@ nano /etc/mysql/mysql.conf.d/mysqld.cnf
 * bind-address = 0.0.0.0, server menerima koneksi TCP/IP yang masuk melalui semua IPv4 yang ada pada interface jaringan.
 * Dapat memasang lebih dari satu bind-address seperti gambar di bawah ini.
 
-```BASH 
+```shell 
 sudo systemctl restart mysql
 ```
 
-```BASH
+```shell
 $ mysql -u root -p
 mysql > CREATE DATABASE mydb;
 mysql > CREATE USER 'palo'@'%' IDENTIFIED BY 'rahasia';
@@ -37,7 +37,7 @@ mysql > FLUSH PRIVILEGES;
 #### Ekseskusi di `pod-pod0`
 #### 1. Menjalankan docker container phpmyadmin untuk meremote database yang ada di pod-pod1
 
-```BASH
+```shell
 docker run --name phpmyadminpalo -d -e PMA_HOST=10.1.40.18 -p 8044:80 phpmyadmin/phpmyadmin 
 ```
 Test On Browser dengan di tunnel dengan login akun mysql yang kita telah buat di pod-pod1.
@@ -48,7 +48,7 @@ Test On Browser dengan di tunnel dengan login akun mysql yang kita telah buat di
 
 #### 2. Lakukan git clone ke file web simabes dan edit beberapa codingannya.
 
-```BASH 
+```shell 
 root@pod0:~/gaskeun# ls
 Dockerfile  apache-config.conf  simabes
 root@pod0:~/gaskeun# git clone https://github.com/winardiaris/simabes.git
@@ -79,7 +79,7 @@ ke mysql pod-pod1 dengan phpmyadmin
 tabel database untuk web simabes akan otomatis ter import ke database kita.
 
 Buat file apache-config.conf
-```BASH
+```shell
 root@pod0:~/gaskeun# nano apache-config.conf 
 <VirtualHost *:80>
   ServerAdmin me@mydomain.com
@@ -101,7 +101,7 @@ root@pod0:~/gaskeun# nano apache-config.conf
 
 #### 3. Script Dockerfile untuk Web Simabes dan Eksekusi
 
-```BASH
+```shell
 FROM ubuntu:latest
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -138,7 +138,7 @@ ADD . /var/www/
 
 Jalankan
 
-```BASH
+```shell
 root@pod0:~# docker build -t simabespalo .
 root@pod0:~# docker run -d -p 9191:80 simabespalo 
 ```

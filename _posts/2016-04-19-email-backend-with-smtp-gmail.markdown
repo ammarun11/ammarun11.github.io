@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Email BackEnd with SMTP Gmail"
 date:   2016-04-19 02:28:15 +0700
 categories: [python, django]

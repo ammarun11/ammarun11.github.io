@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[FortiGate] Install FortiGate dengan GNS3"
 categories: [ngoprek, server, routing   , cisco, security]
 ---
@@ -55,7 +55,7 @@ untuk yang menggunakan Linux ubuntu bisa membuat ethernet virtual dengan TUN/TAP
 
 **Selanjutnya kita Start Jika ada Indicator Eror Seperti Di Linux Ubuntu Maka lakukan perintah seperti ini**
 
-```BASH
+```shell
 sudo chown root:namausernamemu /dev/kvm
 ```
 ![fortigate-qemu-eror](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/fortigate-qemu-eror.png)
@@ -66,7 +66,7 @@ sudo chown root:namausernamemu /dev/kvm
 
 Right-Click on FortiGate, lalu click on Console to access the CLI. Masukan username is 'admin' dan blank password.
 
-```BASH
+```shell
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
 Escape character is.
@@ -91,7 +91,7 @@ FortiGate-VM64-KVM #
 
 **lalu kita set port3 untuk ethernet yang terhubung langsung ke `loopback`.**
 
-```BASH
+```shell
 config system interface
 edit port1
 set ip your-private-ip/your-subnet-mask
@@ -101,7 +101,7 @@ end
 show system interface (To verify the configuration)
 ```
 > My shell
-```BASH
+```shell
 FortiGate-VM64-KVM # config system interface 
 FortiGate-VM64-KVM (interface) # edit port3
 FortiGate-VM64-KVM (port3) # 

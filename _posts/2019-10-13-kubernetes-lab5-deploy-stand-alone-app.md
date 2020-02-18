@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Kubernetes] Deploying Stand-alone app With CLI Lab k8s (Part 5)"
 categories: [ngoprek, server, cloud, docker, container, orchestration]
 ---
@@ -12,7 +12,7 @@ Sebelumnya kita udah coba deploy app demo yaitu sock-shop nah kali ini kita buat
 
 
 ### 1. Membuat file YAML Deployment webserver.yaml
-```BASH
+```shell
 vim webserver.yaml
 
 ...
@@ -36,13 +36,13 @@ spec:
 ```
 
 ### 2. Membuat deployment webserver
-```BASH
+```shell
 kubectl create -f webserver.yaml
 kubectl get deployments
 kubectl get replicasets
 kubectl get pods
 ```
-```BASH
+```shell
 root@pod-master :~# kubectl create -f webserver.yaml 
 deployment.extensions/webserver created
 root@pod-master :~# kubectl get deployments
@@ -59,7 +59,7 @@ webserver-79bc4fff6f-nfgnd   1/1     Running   0          60s
 ```
 
 ### 3. Membuat file YAML Service ServiceType NodePort webserver-svc.yaml
-```BASH
+```shell
 vim webserver-svc.yaml
 
 ...
@@ -80,13 +80,13 @@ spec:
 ```
 
 ### 4. Membuat service
-```BASH
+```shell
 kubectl create -f webserver-svc.yaml
 kubectl get service
 kubectl describe svc web-service
 ```
 
-```BASH
+```shell
 root@pod-master :~# kubectl get service
 NAME          TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)        AGE
 kubernetes    ClusterIP   10.96.0.1     <none>        443/TCP        3d2h
@@ -109,7 +109,7 @@ Events:                   <none>
 ```
 
 ### 5. Test browsing IP master port maping service
-```BASH
+```shell
 curl http://pod-master:[YYYYY]
 ```
 ![k8s-app-stand-alone](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/k8s-app-stand-alone.png)

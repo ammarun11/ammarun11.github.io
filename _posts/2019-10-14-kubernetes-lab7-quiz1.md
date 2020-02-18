@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Kubernetes] Latihan Deploy Nginx app Lab k8s (Part 6)"
 categories: [ngoprek, server, cloud, docker, container, orchestration]
 ---
@@ -11,7 +11,7 @@ Kali ini kita akan membuat service nginx dengan studi kasus
 Buat sebuah deployment dengan image nginx versi dan replica 1, nama deployment tersebut adalah nginx-X juga pastikan deployment tersebut dideploy di pod worker
 
 kita perlu membuat konfigurasi file untuk deployment dan services
-```BASH
+```shell
 vim nginx-latihan.yml
 
 ...
@@ -43,7 +43,7 @@ spec:
 ...
 ```
 
-```BASH
+```shell
 vim nginx-svc.yml
 
 ...
@@ -62,13 +62,13 @@ spec:
 ```
 
 Jalankan file konfigurasinyas
-```BASH
+```shell
 kubectl create -f nginx-latihan.yaml
 kubectl create -f nginx-svc.yaml
 ```
 
 Cek pod yang berjalan lalu Jabarkan
-```BASH
+```shell
 kubectl get pods
 NAME                              READY   STATUS    RESTARTS   AGE
 nfs-server-6dcf498cdc-2hhqb       1/1     Running   0          68m
@@ -81,7 +81,7 @@ webserver-79bc4fff6f-nfgnd        1/1     Running   1          3h26m
 
 Berikut hasil nya ~ 
 
-```BASH
+```shell
 root@pod-master :~# kubectl describe pod nginx-11-6c54d45f9b-jnfsk
 Name:           nginx-11-6c54d45f9b-jnfsk
 Namespace:      default
@@ -137,7 +137,7 @@ Events:
   Normal  Started    6m53s  kubelet, pod-worker  Started container webserver
 ```
 
-```BASH
+```shell
 root@pod-master :~# kubectl get replicaset
 NAME                        DESIRED   CURRENT   READY   AGE
 nfs-server-6dcf498cdc       1         1         1       66m

@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Azure] Membuat Akun Azure for students"
 categories: [ngoprek, server, cloud]
 ---

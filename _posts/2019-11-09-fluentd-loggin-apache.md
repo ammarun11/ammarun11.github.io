@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Fluentd] Logging Apache Web Server Lab Fluentd"
 categories: [ngoprek, cloud , log, cloud native]
 ---
@@ -11,7 +11,7 @@ categories: [ngoprek, cloud , log, cloud native]
 ### Logging Apache Web Server
 
 ## Install Apache
-```BASH
+```shell
 sudo apt install -y apache2
 
 sudo systemctl start apache2
@@ -19,7 +19,7 @@ sudo systemctl status apache2
 
 sudo usermod -aG adm td-agent
 ```
-```BASH
+```shell
 sudo vim /etc/td-agent/td-agent.conf 
 
 ---
@@ -41,13 +41,13 @@ sudo systemctl restart td-agent.service
 
 
 # Akses localhost dan perlihatkan access log apache (td-agent.log)
-```BASH
+```shell
 root@pod03-node0:~# curl localhost
 ```
 
 **lalu di tail file log milik apache**
 
-```BASH
+```shell
 root@pod03-node0:~# tail -f /var/log/td-agent/td-agent.log 
 2019-11-12 03:57:15 +0000 [warn]: #0 'pos_file PATH' parameter is not set to a 'tail' source.
 2019-11-12 03:57:15 +0000 [warn]: #0 this parameter is highly recommended to save the position to resume tailing.

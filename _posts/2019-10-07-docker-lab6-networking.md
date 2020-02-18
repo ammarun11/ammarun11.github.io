@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Docker] Networking Lab Docker (Part 6)"
 categories: [ngoprek, server, cloud, docker, container]
 ---
@@ -16,7 +16,7 @@ Lab ini kita akan ngoprek lebih dalam Network yang ada di docker container, b
 
 #### 1. Menjalankan Container Alpine mengunakan Default Bridge Network dengan shell ash
 
-```BASH
+```shell
 root@pod0:~# docker network ls
 NETWORK ID          NAME                DRIVER              SCOPE
 1448af1458d5        bridge              bridge              local
@@ -26,7 +26,7 @@ NETWORK ID          NAME                DRIVER              SCOPE
 
 Jalankan 2 container alpine yang menjalankan shell ash
 
-```BASH
+```shell
 docker run -dit --name alpine1 alpine ash
 docker run -dit --name alpine2 alpine ash
 docker container ls
@@ -34,15 +34,15 @@ docker container ls
 
 Tampilan Detail Network Bridge
 
-```BASH
+```shell
 docker network inspect bridge
 ```
 
 Masuk ke container alpine1
-```BASH
+```shell
 docker attach alpine1
 ```
-```BASH
+```shell
 root@pod0:~# docker attach alpine1
 / # ip add 
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1
@@ -78,7 +78,7 @@ round-trip min/avg/max = 0.082/0.126/0.255 ms
 > Keluar dari container alpine1 tanpa menutup shell tekan Ctrl+P, Ctrl+Q
 
 Hapus kedua container
-```BASH
+```shell
 docker container rm -f alpine1 alpine2
 ```
 ---
@@ -87,7 +87,7 @@ docker container rm -f alpine1 alpine2
 
 membuat network bridge sendiri untuk menghubungkan alpine2 & 3 saja sedangkan alpine1 by default hanya menggunakan bridge bawaan makan hanya akan terhubung ke alpine 3
 
-```BASH
+```shell
 ## embuat bridge network alpine-net
 docker network create --driver bridge alpine-net
 
@@ -95,7 +95,7 @@ docker network create --driver bridge alpine-net
 docker network inspect alpine-net
 ```
 
-```BASH
+```shell
 ## Tampilkan daftar network
 root@pod0:~# docker network ls
 NETWORK ID          NAME                DRIVER              SCOPE
@@ -106,7 +106,7 @@ NETWORK ID          NAME                DRIVER              SCOPE
 ```
 
 Buat 3 container: container alpine1 terhubung ke network default bridge, container alpine2 terhubung ke network alpine-net dan container alpine3 terhubung ke kedua network default bridge dan alpine-net
-```BASH
+```shell
 docker run -dit --name alpine1 alpine ash
 docker run -dit --name alpine2 --network alpine-net alpine ash
 docker run -dit --name alpine3 alpine ash
@@ -114,7 +114,7 @@ docker network connect alpine-net alpine3
 docker container ls
 ```
 
-```BASH
+```shell
 root@pod0:~# docker run -dit --name alpine1 alpine ash
 fa5eca2f462fdb546888ef1850738ef6727ca3573db4bba2ba6252bf802eecba
 root@pod0:~# docker run -dit --name alpine2 --network alpine-net alpine ash
@@ -131,20 +131,20 @@ fa5eca2f462f        alpine                  "ash"                    2 seconds a
 
 Tampilkan detail network bridge dan alpine-net
 
-```BASH
+```shell
 docker network inspect bridge
 docker network inspect alpine-net
 ```
 
 Masuk ke container alpine3 dan uji ping ke alamat ip alpine1 dan ke nama container alpine1 dan alpine2 
-```BASH
+```shell
 docker attach alpine3
 ping -c 3 172.17.0.4 || alpine1
 ping -c 3 alpine1 || gagal 
 ping -c 3 alpine2 || Sukses
 ```
 
-```BASH
+```shell
 / # ping -c 3 172.17.0.4
 PING 172.17.0.4 (172.17.0.4): 56 data bytes
 64 bytes from 172.17.0.4: seq=0 ttl=64 time=0.133 ms
@@ -170,12 +170,12 @@ round-trip min/avg/max = 0.060/0.106/0.137 ms
 
 Masuk ke container alpine2 dan uji ping ke alamat ip container alpine1 (gagal karena beda bridge network dan beda subnet) dan ke internet (sukses)
 
-```BASH
+```shell
 docker attach alpine2
 ping -c 3 172.17.0.4
 ping -c 3 8.8.8.8
 ```
-```BASH
+```shell
 root@pod0:~# docker attach alpine2
 / # ping -c 3 172.17.0.4
 PING 172.17.0.4 (172.17.0.4): 56 data bytes
@@ -195,7 +195,7 @@ round-trip min/avg/max = 5.522/5.837/6.304 ms
 
 Hapus semua container dan network alpine-net
 
-```BASH
+```shell
 docker container rm -f alpine1 alpine2 alpine3
 docker network rm alpine-net
 ```
@@ -205,14 +205,14 @@ docker network rm alpine-net
 Di lab ini kita akan membangun Container nginx yang langsung terhubung ke host kita dan berjalan di port 80 
 
 Jalankan container dari image nginx dan uji coba 
-```BASH
+```shell
 docker run --rm -itd --network host --name my_nginx nginx
 curl http://localhost
 ip add
 netstat -tulpn | grep :80
 ```
 
-```BASH
+```shell
 root@pod0:~# docker run --rm -itd --network host --name my_nginx nginx
 Unable to find image 'nginx:latest' locally
 latest: Pulling from library/nginx
@@ -281,7 +281,7 @@ tcp6       0      0 :::8044                 :::*                    LISTEN      
 ```
 
 Hapus container my_nginx
-```BASH
+```shell
 docker container rm -f my_nginx
 ```
 

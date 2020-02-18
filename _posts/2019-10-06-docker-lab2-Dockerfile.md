@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Docker] Dockerfile Lab Docker (Part 2)"
 categories: [ngoprek, server, cloud, docker, container]
 ---
@@ -17,7 +17,7 @@ Lab selanjutnya kita akan mencoba untuk menjalankan Docker container dengan meng
 [https://hub.docker.com](https://hub.docker.com).
 
 #### 2. Jalankan image whalesay
-```BASH
+```shell
 sudo docker run docker/whalesay cowsay palopalepalo
 ```
 ![docker-whalesay](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/docker-whalesay.png)
@@ -28,14 +28,14 @@ sudo docker run docker/whalesay cowsay palopalepalo
 
 #### 1. Buka Docker Hub dan cari
 
-```BASH 
+```shell 
 sudo mkdir -p /latihan/latihan01
 sudo chown -R ubuntu:ubuntu /latihan
 cd /latihan/latihan01
 ```
 
 #### 2. Buat file Dockerfile
-```BASH
+```shell
 vim Dockerfile
 
 # Use whalesay image as a base image
@@ -49,14 +49,14 @@ CMD /usr/games/fortune -a | cowsay
 ```
 
 #### 3. Bangun image dari Dockerfile lalu jalankan
-```BASH
+```shell
 sudo docker build -t docker-whale
 sudo docker image ls
 sudo docker run docker-whale
 ```
 
 #### 4. Menghapus Image & Container 
-```BASH
+```shell
 sudo docker image rm [IMAGE_ID]
 sudo docker rm [CONTAINER_ID]
 ```

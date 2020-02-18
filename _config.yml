@@ -13,81 +13,29 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-remote_theme: "mmistakes/so-simple-theme@3.2.0"
-local: en-US
 title: My Personal Ngoprek Problems >_
 email: naufalammarun11@gmail.com
-description:
-  My name is Ammar and this is my personal blog, documenting my journey
-  on the quest to become the best person I can be.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ammarun.my.id" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/images/code-logo.svg"
-date_format: "%B %-d, %Y"
-read_time: true
-words_per_minute: 200
-mathjax: true
-google_fonts:
-  - name: "Source Sans Pro"
-    weights: "400,400i,700,700i"
-  - name: "Lora"
-    weights: "400,400i,700,700i"
-google_analytics: UA-148949117-1
-disqus:
-  shortname: masalahngoprek
-google_site_verification : "zKB-7_EmphHj7Wpc-lRmu7BjIVPWRvMJkoqWQQBSjEI"
-
-# Pagination - https://jekyllrb.com/docs/pagination/
-# paginate: true
-paginate: 10
-paginate_path: /page:num/
-
-# Collections
-collections:
-  recipes:
-    output: true
-    permalink: /:collection/:path/
+description: My name is Ammar and this is my personal blog, documenting my journey on the quest to become the best person I can be.
+# this means to ignore newlines until "baseurl:"
+# Write an awesome description for your new site here. You can edit this
+# line in _config.yml. It will appear in your document head meta (for
+# Google search results) and in your feed.xml site description.
+twitter_username: ammarun11
+github_username: ammarun11
+minimal_mistakes_skin: default
+search: true
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-paginate
+theme: minimal-mistakes-jekyll
+# Outputting
+permalink: /:categories/:title/
+paginate: 10 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# Search
-search_full_content: false
-
-
-  # Site Author
-author:
-  name: Muhammad Naufal Ammar
-  picture: /images/professional-headshot.jpg
-  email:
-  twitter: 
-  links:
-    - title: Twitter
-      url: https://twitter.com/#
-      icon: fab fa-twitter-square
-    - title: GitHub
-      url: https://github.com/ammarun11
-      icon: fab fa-github-square
-    - title: LinkedIn
-      url: https://www.linkedin.com/in/ammarun11
-      icon: fab fa-linkedin
-
-# Footer Links
-footer_links:
-  - title: Twitter
-    url: https://twitter.com/#
-    icon: fab fa-twitter-square
-  - title: GitHub
-    url: https://github.com/ammarun11
-    icon: fab fa-github-square
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/#
-    icon: fab fa-linkedin
+include:
+  - _pages
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -100,3 +48,89 @@ footer_links:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+author:
+  name   : "Muhammad Naufal Ammar"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "\"Any sufficiently advanced technology is indistinguishable from magic.\"<br> - Arthur C. Clarke"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.ammarun.my.id"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/ammarun"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ammarun11"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/nopallll"
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/ammarun"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ammarun11"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/ammarun"
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "masalahngoprek"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+
+teaser: /assets/images/500x300.jpg
+
+# logo: /assets/images/88x88.jpg
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+analytics:
+  provider: "google"
+  google:
+    tracking_id: "UA-148949117-1"
+    anonymize_ip: false # default
+
+# fixes "No GitHub API authentication" error
+github: [metadata]
+

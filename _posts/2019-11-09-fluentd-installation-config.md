@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Fluentd] lab setup Installation fluentd"
 categories: [ngoprek, cloud , log, cloud native]
 ---
@@ -39,7 +39,7 @@ categories: [ngoprek, cloud , log, cloud native]
 ## !! Ekseskusi di node0 !! ##
 
 **Install Fluentd (td-agent)**
-```BASH
+```shell
 sudo apt update && sudo apt -y upgrade && sudo apt autoremove -y
 sudo apt -y install chrony vim git
 
@@ -49,10 +49,10 @@ sudo chronyc sources
 ```
 
 **Increase max # of File Descriptors**
-```BASH
+```shell
 ulimit -n
 ```
-```BASH
+```shell
 sudo vim /etc/security/limits.conf
 
 #isi seperti dibawah
@@ -63,12 +63,12 @@ root    hard    nofile  65536
 ```
 
 **Reboot pod3-node0**
-```BASH
+```shell
 reboot
 ```
 
 **Jalankan Service Fluentd**
-```BASH
+```shell
 curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-bionic-td-agent3.sh | sh
 
 sudo systemctl start td-agent.service
@@ -76,14 +76,14 @@ sudo systemctl status td-agent.service
 ```
 
 **Uji Coba log via HTTP**
-```BASH
+```shell
 curl -X POST -d 'json={"json":"message"}' http://localhost:8888/debug.test
 
 tail -f /var/log/td-agent/td-agent.log
 ```
 
 hasil uji coba log 
-```BASH
+```shell
 root@pod03-node0:~# curl -X POST -d 'json={"json":"message"}' http://localhost:8888/debug.test
 root@pod03-node0:~# tail -f /var/log/td-agent/td-agent.log
 2019-11-09 10:30:10 +0000 [warn]: #0 [output_td] secondary type should be same with primary one primary="Fluent::Plugin::TreasureDataLogOutput" secondary="Fluent::Plugin::FileOutput"

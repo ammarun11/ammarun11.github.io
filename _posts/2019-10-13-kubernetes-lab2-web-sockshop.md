@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Kubernetes] Deploy Sock-shop Lab k8s (Part 2)"
 categories: [ngoprek, server, cloud, docker, container, orchestration]
 ---
@@ -15,14 +15,14 @@ Bisa kalian lihat lihat sumber code nya [https://github.com/microservices-demo/m
 #### Eksekusi di semua pod ###
 
 
-```BASH
+```shell
 kubectl create namespace sock-shop
 kubectl apply -n sock-shop -f "https://github.com/microservices-demo/microservices-demo/blob/master/deploy/kubernetes/complete-demo.yaml?raw=true"
 kubectl -n sock-shop get svc front-end
 kubectl -n sock-shop get pods
 ```
 
-```BASH
+```shell
 root@pod-master :~# kubectl -n sock-shop get pods
 
 NAME                            READY   STATUS    RESTARTS   AGE
@@ -50,7 +50,7 @@ tampilkan sock-shop di browser jika sudah sukses terdeploy. karena saya membuat 
 ![k8s-sockshop](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/k8s-sock-shop.png)
 
 Delete sock-shop namespaces
-```BASH
+```shell
 kubectl delete namespace sock-shop
 ```
 

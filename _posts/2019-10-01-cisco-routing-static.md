@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Cisco] Static Routing"
 categories : [network, cisco, routing]
 ---

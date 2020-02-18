@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Kubernetes] Dashboard Lab k8s (Part 3)"
 categories: [ngoprek, server, cloud, docker, container, orchestration]
 ---
@@ -14,7 +14,7 @@ Oke lab ini kita akan memasang Dashbord mili sii kubernetes
 
 ### 1. Instal Kubernetes Dashboard
 
-```BASH
+```shell
 mkdir ~/certs
 kubectl create secret generic kubernetes-dashboard-certs --from-file=$HOME/certs -n kube-system
 kubectl apply -f https://raw.githubusercontent.com/nolsatuid/labs/master/k9-adm/script/kubernetes-dashboard.yaml
@@ -23,12 +23,12 @@ kubectl -n kube-system get svc
 ```
 
 ### 2. Set Permissive RBAC Permissions 
-```BASH
+```shell
 kubectl create clusterrolebinding permissive-binding --clusterrole=cluster-admin --user=admin --user=kubelet --group=system:serviceaccounts
 ```
 
 ### 3. Menampilkan service account token
-```BASH
+```shell
 kubectl get secrets
 kubectl describe secret [NAMATOKEN]
 ```

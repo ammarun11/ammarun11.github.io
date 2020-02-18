@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Kubernetes] Presistent Volume (PV) & Presistent Volume Claim (PVC) Lab k8s (Part 6)"
 categories: [ngoprek, server, cloud, docker, container, orchestration]
 ---
@@ -20,14 +20,14 @@ ref :
 
 
 ### Di pod worker, buat direktori /data #####
-```BASH
+```shell
 sudo mkdir /data
 ```
 ### Unduh file manifest untuk deploy NFS server #####
-```bash
+```shell
 wget -c https://raw.githubusercontent.com/nolsatuid/labs/master/k9-adm/script/nfs-server.yaml
 ```
-```BASH
+```shell
 vim nfs-server.yaml
 
 ---
@@ -38,7 +38,7 @@ vim nfs-server.yaml
 ganti `node0` dengan nama host `pod-worker` (kubectl get nodes) masing-masing.
 
 ### Di node master, jalankan file nfs-server.yaml #####
-```BASH
+```shell
 kubectl create -f nfs-server.yaml
 kubectl describe deployment nfs-server
 kubectl describe services nfs-server
@@ -46,10 +46,10 @@ kubectl describe services nfs-server
  Catat ClusterIP dari nfs-server 10.97.142.135
 
 ### PV Provisioning. Download nfs-pv.yaml dan edit IP server dengan ClusterIP nfs-server #####
-```BASH
+```shell
 wget -c https://raw.githubusercontent.com/nolsatuid/labs/master/k9-adm/script/pv.yaml
 ```
-```BASH
+```shell
 vim pv.yaml
 .....
   nfs:
@@ -58,29 +58,29 @@ vim pv.yaml
 path: "/exports"
 ....
 ```
-```BASH
+```shell
 kubectl create -f pv.yaml
 kubectl get pv
 ```
 
 ## PVC ###
-```BASH
+```shell
 kubectl create -f https://raw.githubusercontent.com/nolsatuid/labs/master/k9-adm/script/pvc.yaml
 kubectl get pvc
 ```
 
 ### Instal paket nfs-common di semua node ###
-```BASH
+```shell
 sudo apt install -y nfs-common
 ```
 
 ### Setup apps using pvc ###
-```BASH
+```shell
 kubectl create -f https://raw.githubusercontent.com/nolsatuid/labs/master/k9-adm/script/nginx.yaml
 ```
 
 ### Buat service untuk nginx (nginx-svc.yaml) ###
-```BASH
+```shell
 vim nginx-svc.yaml
 ...
 apiVersion: v1
@@ -100,7 +100,7 @@ kubectl create -f nginx-svc.yaml
 ```
 
 ### tambahkan index.html di folder /data di pod worker ###
-```BASH
+```shell
 sudo su
 echo "this is index file from palopalepalo-11" >> /data/index.html
 ```

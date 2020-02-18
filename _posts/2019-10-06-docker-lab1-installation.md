@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Docker] Installation Lab Docker (Part 1)"
 categories: [ngoprek, server, cloud, docker, container]
 ---
@@ -29,7 +29,7 @@ Persiapkan Lab Node yang akan kita gunakan disini saya menggunakan private cloud
 #### Eksekusi di node `pod-pod0` ###
 
 #### 1. Instal Docker & Menampilkan versi docker
-```BASH
+```shell
 sudo apt update
 sudo apt -y install docker.io
 sudo systemctl status docker
@@ -39,14 +39,14 @@ sudo docker version
 
 #### 2. Uji instalasi docker
 
-```BASH
+```shell
 sudo docker run hello-world
 sudo docker image ls
 sudo docker container ls -a
 ```
 
 > Menampilkan semua container (Active  ataupun exit)
-```BASH
+```shell
 sudo docker container ls -a
 ```
 

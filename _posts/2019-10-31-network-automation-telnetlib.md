@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Cisco] Konfigurasi Router Cisco dengan telnetlib python"
 categories: [ngoprek, automation, routing , cisco]
 ---
@@ -27,7 +27,7 @@ categories: [ngoprek, automation, routing , cisco]
 
 **Disini saya menginstall nya di gns3 local, jadi resource yang di gunakan langsung menggunakan perangkat laptop. dan si Node NetworkAutomation ini terinstall di `docker`**.
 
-```BASH
+```shell
 root@ilmi:/home/tholib# docker image ls
 REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
 node-docker-alpine            latest              44fc11081331        2 months ago        199MB
@@ -50,7 +50,7 @@ eb8ad0174086        adosztal/network_automation:latest   "/gns3/init.sh sh -c…
 * Disini saya menggunakan ip 192.168.10.0/24
 
 >Router1 Untuk menset ip & telnet pada router 
-```BASH
+```shell
 R1#conf t
 Enter configuration commands, one per line.  End with CNTL/Z.
 R1(config)# interface f0/0
@@ -64,7 +64,7 @@ R1(config-line)#login local
 ```
 
 >NetworkAutomation
-```BASH
+```shell
 root@NetworkAutomation-2:~# ifconfig eth0 192.168.10.1
 root@NetworkAutomation-2:~# ifconfig
 eth0      Link encap:Ethernet  HWaddr 92:9a:f9:ac:7b:40  
@@ -122,7 +122,7 @@ telnetlibv1.py
 
 * Node Network Automation
 
-```BASH
+```shell
 root@NetworkAutomation-2:~# python telnetlibv1.py 
 
 R1#conf t
@@ -137,7 +137,7 @@ Oke untuk melihat konfig nya berhasil atau tidak kita lihat node si router dah k
 
 * Node Router
 
-```BASH
+```shell
 R1#show ip interface brief 
 Interface                  IP-Address      OK? Method Status                Protocol
 FastEthernet0/0            192.168.10.2    YES NVRAM  up                    up      

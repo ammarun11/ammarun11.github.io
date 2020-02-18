@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Kubernetes] Kubernetes Initialize Lab k8s (Part 1)"
 categories: [ngoprek, server, cloud, docker, container, orchestration]
 ---
@@ -37,28 +37,28 @@ berikut list node yang saya gunakan :
 
 ## Upgrade paket, instal docker dan k8s Versi (v1.15.4)
 
-```BASH
+```shell
 sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y
 sudo apt install -y docker.io; sudo docker version
 ```
 
 Instal kubectl, kubelet & kubeadm
-```BASH
+```shell
 sudo apt install -y apt-transport-https; curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 ```
 
-```BASH
+```shell
 nano kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
 ```
 Copy kubernetes.list ke repo list
-```BASH
+```shell
 sudo mv kubernetes.list /etc/apt/sources.list.d/kubernetes.list
 sudo apt update; sudo apt install -y kubectl=1.15.4-00 kubelet=1.15.4-00 kubeadm=1.15.4-00
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 Cek versi
-```BASH
+```shell
 root@pod-master:~# kubeadm version
 kubeadm version: &version.Info{Major:"1", Minor:"15", GitVersion
 :"v1.15.4", GitCommit:"67d2fcf276fcd9cf743ad4be9a9ef5828adc082f", GitTreeState:"clean", BuildDate:"2019-09-18T14:48:18Z", GoVersion:"go1.12.9", Compiler:"gc", Platform:"linux/amd64"}
@@ -68,26 +68,26 @@ kubeadm version: &version.Info{Major:"1", Minor:"15", GitVersion
 ## Eksekusi di pod master #####
 
 Inisialisasi Master (verifikasi dan matikan swap lebih dulu)
-```BASH
+```shell
 swapon -s
 sudo swapoff -a
 sudo kubeadm init --pod-network-cidr=10.244.3.0/16
 Membuat secret sebelum itu kita harus menyalakan docker swarm
 ```
 Salin konfigurasi admin kubernetes
-```BASH
+```shell
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 Instal POD Network Flannel
-```BASH
+```shell
 wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
 kubectl apply -f kube-flannel.yml
 kubectl get pods --all-namespaces --watch
 ```
-```BASH
+```shell
 root@pod-master :~# kubectl get pods --all-namespaces --watch
 NAMESPACE     NAME                                 READY   STATUS    RESTARTS   AGE
 kube-system   coredns-5c98db65d4-ncfbn             1/1     Running   0          5m45s
@@ -101,11 +101,11 @@ kube-system   kube-scheduler-pod-master            1/1     Running   0          
 ```
 
 Verifikasi config dan cluster
-```BASH
+```shell
 kubectl config view
 kubectl cluster-info
 ```
-```BASH
+```shell
 root@pod-master :~# kubectl config view
 apiVersion: v1
 clusters:
@@ -135,12 +135,12 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 
 Tampilkan Token dan token-ca-cert-hash 
 
-```BASH
+```shell
 sudo kubeadm token list
 sudo openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl  rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'
 ```
 
-```BASH
+```shell
 root@pod-master :~# kubeadm token list
 
 TOKEN                     TTL       EXPIRES                USAGES                   DESCRIPTION                                                EXTRA GROUPS
@@ -156,24 +156,24 @@ de9c723b4b3d10e54cbb4cbc55d9abd007fa9edaf0076577827b5d33b59e79c4
 ## Ekseskusi di pod-worker
 
 Join Node Worker ke Master (verifikasi dan matikan swap lebih dulu)
-```BASH
+```shell
 swapon -s
 sudo swapoff -a
 sudo kubeadm join --token [TOKEN] [NODE-MASTER]:6443 --discovery-token-ca-cert-hash sha256:[TOKEN-CA-CERT-HASH]
 ```
 
-```BASH
+```shell
 root@pod-worker:~# sudo kubeadm join --token ihk6ha.v
 lih4iuykm0y68i3 pod-master:6443 --discovery-token-ca-cert-hash sha256:de9c723b4b3d10e54cbb4cbc55d9abd007fa9edaf0076577827b5d33b59e79c
 ```
 ## Eksekusi di pod master #####
 
 verifikasi nodes 
-```BASH
+```shell
 kubectl get nodes
 ```
 
-```BASH
+```shell
 root@pod-master :~# kubectl get nodes 
 NAME          STATUS   ROLES    AGE   VERSION
 pod-master    Ready    master   31m   v1.15.4

@@ -1,5 +1,5 @@
 ---
-layout : post
+
 title : "[Fluentd] Menghitung Jumlah Keseluruhan Records Log Lab fluentd"
 categories: [ngoprek, cloud , log, cloud native]
 ---
@@ -14,7 +14,7 @@ categories: [ngoprek, cloud , log, cloud native]
 sudo systemctl status docker
 ```
 ### Add td-agent.conf
-```BASH
+```shell
 sudo vim /etc/td-agent/td-agent.conf
 ---
 # Monitoring fluentd ke prometheus 
@@ -63,7 +63,7 @@ sudo systemctl restart td-agent.service
 
 Jalankan Container dengan perintah berikut
 
-```BASH
+```shell
 sudo docker run -d --log-driver=fluentd --log-opt tag="docker.{{.ID}}" nginx:latest echo 'Iki buat Latihan Lur' -p 9000:9000
 ```
 
