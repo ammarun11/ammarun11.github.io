@@ -4,7 +4,7 @@ main:
   - title: "📝 Blog"
     url: /posts/
   - title: "🏆 Projects"
-    url: /projects/
+    url: /404.html
   - title: "📚 Categories"
     url: /categories/
   - title: "👨 About"
