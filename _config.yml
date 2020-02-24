@@ -58,12 +58,12 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-  - jekyll-remote-theme
+  # - jekyll-remote-theme
 
 author:
-  name   : "Muhammad Naufal Ammar"
+  name   : ">_"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "\"Any sufficiently advanced technology is indistinguishable from magic.\"<br> - Arthur C. Clarke"
+  bio    : "\"My name is Ammar and this is my personal blog, documenting my journey on the quest to become the best person I can be.\"<br> - Arthur C. Clarke"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"

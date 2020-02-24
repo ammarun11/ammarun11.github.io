@@ -39,4 +39,4 @@ Login dengan https://IP:30000 , lalu isikan token secret and Sign In
 ![k8s-dashboard](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/k8s-dashboard.png)
 
 ---
-# Happy Enjoy ngoprek~
+# Happy,  Enjoy ngoprek~

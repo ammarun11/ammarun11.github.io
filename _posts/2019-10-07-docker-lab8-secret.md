@@ -106,4 +106,4 @@ root@pod0:~/latihan/my_app# docker secret rm my_secret_data
 my_secret_data
 ```
 
-# Happy Enjoy Ngoprek ~
+# Happy,  Enjoy Ngoprek ~

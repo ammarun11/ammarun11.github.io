@@ -161,4 +161,4 @@ Kita bisa membuat script otomasi untuk mengkonfig router cisco dengan library py
 
 
 
-# Happy Enjoy ngoprek~
+# Happy,  Enjoy ngoprek~

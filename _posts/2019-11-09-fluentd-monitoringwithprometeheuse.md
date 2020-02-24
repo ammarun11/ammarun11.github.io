@@ -133,4 +133,4 @@ root@pod03-node0:~# tail -f /var/log/td-agent/td-agent.log
 * [https://docs.fluentd.org/deployment/monitoring-prometheus](https://docs.fluentd.org/deployment/monitoring-prometheus)
 
 
-# Happy Enjoy ngoprek~
+# Happy,  Enjoy ngoprek~

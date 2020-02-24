@@ -112,4 +112,4 @@ root@pod03-node0:~# tail -f /var/log/td-agent/td-agent.log
 **Referensi**
 * [https://docs.fluentd.org/language-bindings/nodejs](https://docs.fluentd.org/language-bindings/nodejs)
 * [https://www.npmjs.com/package/fluent-logger](https://www.npmjs.com/package/fluent-logger)
-# Happy Enjoy ngoprek~
+# Happy,  Enjoy ngoprek~

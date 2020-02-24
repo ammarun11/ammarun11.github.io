@@ -55,4 +55,4 @@ kubectl delete namespace sock-shop
 ```
 
 ---
-# Happy Enjoy ngoprek~
+# Happy,  Enjoy ngoprek~

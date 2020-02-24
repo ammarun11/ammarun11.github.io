@@ -29,7 +29,7 @@ The benchmarks are clear: _asyncpg_ is on average, at least **3x faster** than _
 
 ## 4. [boto3](https://github.com/boto/boto3)
 
-If you have your infrastructure on AWS or otherwise make use of their services (such as S3), you should be very happy that [boto](https://github.com/boto/boto), the Python interface for AWS API, got a completely rewrite from the ground up. The great thing is that you don’t need to migrate your app all at once: you can use _boto3_ and _boto_ (2) _at the same time_; for example using boto3 only for new parts of your application.
+If you have your infrastructure on AWS or otherwise make use of their services (such as S3), you should be very Happy,  that [boto](https://github.com/boto/boto), the Python interface for AWS API, got a completely rewrite from the ground up. The great thing is that you don’t need to migrate your app all at once: you can use _boto3_ and _boto_ (2) _at the same time_; for example using boto3 only for new parts of your application.
 
 The new implementation is much **more consistent** between different services, and since it uses a data-driven approach to generate classes at runtime from JSON description files, it will always get fast updates. No more lagging behind new Amazon API features, move to _boto3_!
 

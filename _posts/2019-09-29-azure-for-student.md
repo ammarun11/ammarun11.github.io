@@ -56,6 +56,6 @@ Untuk mendaftar dibutuhkan email academy saja misal saya menggunakan email dari 
 
 ![Azure-ACC](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/Azure-ACC.png)
 
-# Enjoy Happy ngoprek ~
+# Enjoy Happy,  ngoprek ~
 
 Next bacaan kita akan ngoprek lebih lanjut si Microsoft Azure ini ~

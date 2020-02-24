@@ -71,4 +71,4 @@ sudo docker run -d --log-driver=fluentd --log-opt tag="docker.{{.ID}}" nginx:lat
 **Referensi**
 * [https://docs.fluentd.org/deployment/monitoring-prometheus#step-4-check-the-configuration](https://docs.fluentd.org/deployment/monitoring-prometheus#step-4-check-the-configuration)
 
-# Happy Enjoy ngoprek~
+# Happy,  Enjoy ngoprek~

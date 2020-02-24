@@ -3,7 +3,7 @@ permalink: /about/
 title: "👨 About"
 ---
 
-# Hi. I'm Ammar.
+# Hi. I'm Muhammad Naufal Ammar.
 
 Saya seorang SysAdmin, berpengalaman lebih dari 2 tahun. Mahasiswa Jurusan Teknik Telekomunikasi yang hobinya Makan ~
 

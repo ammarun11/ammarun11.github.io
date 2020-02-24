@@ -146,4 +146,4 @@ Lalu jalankan di web browser dengan cara tunneling
 
 ![Docker-simabes](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/Docker-simabes.png)
 
-# Enjoy Happy Ngoprek ~
+# Enjoy Happy,  Ngoprek ~

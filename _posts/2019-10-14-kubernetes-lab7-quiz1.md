@@ -149,4 +149,4 @@ webserver-79bc4fff6f        3         3         3       3h24m
 > Sudah selesai hasilnya kita membuat deployment nginx dengan replica 1 dan mendeploy nya di pod-worker
 
 
-# Happy Enjoy ngoprek~
+# Happy,  Enjoy ngoprek~

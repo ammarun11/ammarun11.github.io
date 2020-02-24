@@ -48,4 +48,4 @@ root@pod03-node0:~# tail -f /var/log/td-agent/td-agent.log
 **Referensi**
 * [https://docs.fluentd.org/container-deployment/docker-logging-driver#getting-started](https://docs.fluentd.org/container-deployment/docker-logging-driver#getting-started)
 
-# Happy Enjoy ngoprek~
+# Happy,  Enjoy ngoprek~

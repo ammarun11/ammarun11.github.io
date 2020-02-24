@@ -115,4 +115,4 @@ curl http://pod-master:[YYYYY]
 ![k8s-app-stand-alone](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/k8s-app-stand-alone.png)
 
 ---
-# Happy Enjoy ngoprek~
+# Happy,  Enjoy ngoprek~

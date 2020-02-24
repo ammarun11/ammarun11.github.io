@@ -176,7 +176,7 @@ FastEthernet 0/1 192.168.10.1
 
 ---
 
-# Happy Enjoy ngoprek ~
+# Happy,  Enjoy ngoprek ~
 
 
 
