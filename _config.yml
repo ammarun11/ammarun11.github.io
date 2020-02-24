@@ -63,7 +63,7 @@ plugins:
 author:
   name   : ">_"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "\"My name is Ammar and this is my personal blog, documenting my journey on the quest to become the best person I can be.\"<br> - Arthur C. Clarke"
+  bio    : "\"My name is Ammar and this is my personal blog, documenting my journey on the quest to become the best person I can be.\"<br>"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
