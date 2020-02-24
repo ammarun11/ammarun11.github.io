@@ -94,6 +94,8 @@ comments:
   provider: "disqus"
   disqus:
     shortname: "masalahngoprek"
+google_site_verification : "zKB-7_EmphHj7Wpc-lRmu7BjIVPWRvMJkoqWQQBSjEI"
+
 
 defaults:
   # _posts
