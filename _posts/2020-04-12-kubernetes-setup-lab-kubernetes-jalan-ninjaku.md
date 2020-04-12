@@ -9,9 +9,9 @@ tags:
 # بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
 ## Kubernetes Jalan Ninjaku (Kubernetes The Hardway)
 
-Okrayy pada tutorial kali ini kita akan mengkonfigurasi atau menjalankan kubernetes namun dengan cara the hardway, jadi kita membangun sebuah sistem kubernetes tanpa bantuan automasisasi atau library yang bisa langsung tuiing jdii tuh kebernetes cluster nya semisal minikuber dan kubeadm..
+Okrayy pada tutorial kali ini kita akan mengkonfigurasi atau menjalankan kubernetes namun dengan cara the hardway, jadi kita membangun sebuah sistem kubernetes tanpa bantuan automasisasi atau library yang bisa langsung tuiing jdii tuh kebernetes cluster nya semisal minikube dan kubeadm (ya walaupun ini perlu di konfigurasi lgi sih hehehee)..
 
-Tujuan Kubernetes The Hard Way ini untuk membantu kita untuk memahami bagaimana services, ecosystem dan cara kerja kubernetes secara menyeluruh.
+Tujuan Kubernetes The Hard Way ini untuk membantu kita untuk memahami bagaimana services, ecosystem dan cara kerja kubernetes secara menyeluruh jadi mantul buat yang merasa kubernetes ini adalah jalan ninjaku :D.
 
 > The results of this tutorial should not be viewed as production ready, and may receive limited support from the community, but don't let that stop you from learning! -Kelsey Higtower-
 
