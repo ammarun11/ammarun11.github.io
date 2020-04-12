@@ -1,13 +1,13 @@
 ---
-title: "[LXC Containers] Play with LXD Container Hypervisor"
+title: "[Kuberetes The Hard Way] setup lab Kubernetes jalan ninjaku"
 date: 2020-02-19
-categories: [ngoprek, server, cloud, lxc, container]
+categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
   - Jekyll
   - update
 ---
 # بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
-## Linux Container Hypervisor (LXD dibaca lex-dee)
+## Kubernetes Jalan Ninjaku (Kubernetes The Hardway)
 
 Proyek LXD didirikan dan saat ini dipimpin oleh Canonical Ltd dengan kontribusi dari berbagai perusahaan lain dan kontributor individu.
 
