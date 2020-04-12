@@ -1,5 +1,5 @@
 ---
-title: "[Kuberetes The Hard Way] setup lab Kubernetes jalan ninjaku"
+title: "[Kubernetes The Hard Way] setup lab Kubernetes jalan ninjaku"
 date: 2020-02-19
 categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
@@ -58,6 +58,7 @@ root@palo:/home# lxc list
 Lab ini akan saya bagi beberapa part supaya tidak numpuk karena banyak service2 yang dibutuhkan uhuy :
 
 * [Installing the Client Tools - Part 1](docs/02-client-tools.md)
+
 <!-- * [Provisioning Compute Resources](docs/03-compute-resources.md)
 * [Provisioning the CA and Generating TLS Certificates](docs/04-certificate-authority.md)
 * [Generating Kubernetes Configuration Files for Authentication](docs/05-kubernetes-configuration-files.md)
