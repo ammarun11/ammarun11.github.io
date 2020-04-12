@@ -1,5 +1,5 @@
 ---
-title: "[Kubernetes The Hard Way] setup lab Kubernetes jalan ninjaku"
+title: "[Kubernetes The Hard Way] Setup Lab Kubernetes Jalan Ninjaku"
 date: 2020-02-19
 categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
@@ -55,8 +55,49 @@ root@palo:/home# lxc list
 
 > Disini saya membuat sebanuak 7 node Container haproxy(Centos7) akan berperan sebagai loadbalancer ke setiap node controller(Ubuntu:18.04) dan worker(Ubuntu:18.04). 
 
+Pertama kita setup Loadbalancer HAproxy nya duls :
+
+Masuk ke container haproxy dan install paket haproxy
+```s
+root@palo:/home/ngoprek# lxc exec haproxy bash 
+[root@haproxy ~]# yum install -y haproxy net-tools 
+```
+
+Edit file konfigurasi haproxy, dan hapus bagian frontend sampai bawah lalu tambahkan,
+```s
+[root@haproxy haproxy]# nano haproxy.cfg
+
+frontend k8s
+  bind 10.240.0.254:6443
+  mode tcp
+  default_backend k8s
+
+backend k8s
+  balance roundrobin
+  mode tcp
+  option tcplog
+  option tcp-check
+  server controller-0 10.240.0.208:6443 check
+  server controller-0 10.240.0.215:6443 check
+  server controller-0 10.240.0.2232:6443 check
+```
+
+Up service haproxy dan check,
+```s
+[root@haproxy haproxy]# systemctl enable haproxy
+[root@haproxy haproxy]# systemctl start haproxy
+[root@haproxy haproxy]# systemctl status haproxy
+[root@haproxy haproxy]# netstat -nltp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 10.240.0.254:6443       0.0.0.0:*               LISTEN      586/haproxy         
+[root@haproxy haproxy]# 
+```
+oke sudah selesai di setup haproxy nya lanjut ke node controller dan node worker ya lainnya,
+
 Lab ini akan saya bagi beberapa part supaya tidak numpuk karena banyak service2 yang dibutuhkan uhuy :
 
+* [Setup Lab Kubernetes Jalan Ninjaku](#)
 * [Installing the Client Tools - Part 1](docs/02-client-tools.md)
 
 <!-- * [Provisioning Compute Resources](docs/03-compute-resources.md)
