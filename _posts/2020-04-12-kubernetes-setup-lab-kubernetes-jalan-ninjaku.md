@@ -99,6 +99,7 @@ Lab ini akan saya bagi beberapa part supaya tidak numpuk karena banyak service2 
 
 * [Setup Lab Kubernetes Jalan Ninjaku](#)
 * [Installing the Client Tools - Part 1](docs/02-client-tools.md)
+* [Cooming soon ~](#)
 
 <!-- * [Provisioning Compute Resources](docs/03-compute-resources.md)
 * [Provisioning the CA and Generating TLS Certificates](docs/04-certificate-authority.md)
