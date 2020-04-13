@@ -147,7 +147,7 @@ Lab ini akan saya bagi beberapa part supaya tidak numpuk karena banyak service2 
 
 * [Setup Lab Kubernetes Jalan Ninjaku](#)
 * [Installing the Client Tools - Part 1](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Installing-the-client-Tools-part1/)
-* [Provisioning the CA and Generating TLS Certificates - Part 2](docs/04-certificate-authority.md)
+* [Provisioning the CA and Generating TLS Certificates - Part 2](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Provisioning-a-CA-and-Generating-TLS-Certificates-part2/)
 * [Cooming soon ~](#)
 
 <!-- * [Provisioning Compute Resources](docs/03-compute-resources.md)

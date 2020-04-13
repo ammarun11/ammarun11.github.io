@@ -1,5 +1,5 @@
 ---
-title: "[Kubernetes The Hard Way] Installing Client Tools Part-1"
+title: "[Kubernetes The Hard Way] Installing Client Tools - Part 1"
 date: 2020-02-19
 categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
@@ -57,7 +57,7 @@ kubectl version --client
 Client Version: version.Info{Major:"1", Minor:"12", GitVersion:"v1.12.0", GitCommit:"0ed33881dc4355495f623c6f22e7dd0b7632b7c0", GitTreeState:"clean", BuildDate:"2018-09-27T17:05:32Z", GoVersion:"go1.10.4", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-Lanjutnye: [Provisioning Compute Resources - Part 2](03-compute-resources.md)
+Lanjutnye: [Provisioning a CA and Generating TLS Certificates - Part 2](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Provisioning-a-CA-and-Generating-TLS-Certificates-part2/)
 
 ## Gaskunnnn
 
