@@ -1,6 +1,6 @@
 ---
 title: "[Kubernetes The Hard Way] Setup Lab Kubernetes Jalan Ninjaku"
-date: 2020-02-19
+date: 2020-04-12
 categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
   - Jekyll
@@ -148,19 +148,19 @@ Lab ini akan saya bagi beberapa part supaya tidak numpuk karena banyak service2 
 * [Setup Lab Kubernetes Jalan Ninjaku](#)
 * [Installing the Client Tools - Part 1](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Installing-the-client-Tools-part1/)
 * [Provisioning the CA and Generating TLS Certificates - Part 2](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Provisioning-a-CA-and-Generating-TLS-Certificates-part2/)
-* [Cooming soon ~](#)
+* [Generating Kubernetes Configuration Files for Authentication - Part 3](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Generating-Kubernetes-Configuration-Files-for-Authentication-Part3/)
+* [Generating the Data Encryption Config and Key - Part 4](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Generating-the-Data-Encryption-Config-and-Key-Part4/)
+* [Bootstrapping the etcd Cluster - Part 5](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Bootstrapping-the-etcd-Cluster-Part5/)
+* [Bootstrapping the Kubernetes Control Plane - Part 6](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Bootstrapping-the-Kubernetes-Control-Plane-Part6/)
+* [Bootstrapping the Kubernetes Worker Nodes - Part 7](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Bootstrapping-the-Kubernetes-Worker-Nodes-Part7/)
 
-<!-- * [Provisioning Compute Resources](docs/03-compute-resources.md)
-* [Generating Kubernetes Configuration Files for Authentication](docs/05-kubernetes-configuration-files.md)
-* [Generating the Data Encryption Config and Key](docs/06-data-encryption-keys.md)
-* [Bootstrapping the etcd Cluster](docs/07-bootstrapping-etcd.md)
-* [Bootstrapping the Kubernetes Control Plane](docs/08-bootstrapping-kubernetes-controllers.md)
-* [Bootstrapping the Kubernetes Worker Nodes](docs/09-bootstrapping-kubernetes-workers.md)
-* [Configuring kubectl for Remote Access](docs/10-configuring-kubectl.md)
-* [Provisioning Pod Network Routes](docs/11-pod-network-routes.md)
-* [Deploying the DNS Cluster Add-on](docs/12-dns-addon.md)
-* [Smoke Test](docs/13-smoke-test.md)
-* [Cleaning Up](docs/14-cleanup.md) -->
+
+* [Cooming soon :](#)
+
+- [Provisioning Pod Network Routes](docs/11-pod-network-routes.md)
+- [Deploying the DNS Cluster Add-on](docs/12-dns-addon.md)
+- [Smoke Test](docs/13-smoke-test.md)
+- [Cleaning Up](docs/14-cleanup.md)
 
 ## Gaskunnnn
 

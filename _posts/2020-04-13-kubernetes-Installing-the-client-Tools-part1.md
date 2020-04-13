@@ -1,6 +1,6 @@
 ---
 title: "[Kubernetes The Hard Way] Installing Client Tools - Part 1"
-date: 2020-02-19
+date: 2020-04-13
 categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
   - Jekyll

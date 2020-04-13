@@ -1,6 +1,6 @@
 ---
 title: "[Kubernetes The Hard Way] Provisioning a CA and Generating TLS Certificates - Part 2"
-date: 2020-02-19
+date: 2020-04-13
 categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
   - Jekyll
@@ -375,6 +375,11 @@ for instance in controller-0 controller-1 controller-2; do
   lxc file push ca.pem ca-key.pem kubernetes-key.pem kubernetes.pem \
     service-account-key.pem service-account.pem ${instance}/root/
 done
+```
+> Vervication:
+```s
+lxc exec controller-0 ls
+lxc exec worker-0 ls 
 ```
 
 > The kube-proxy, kube-controller-manager, kube-scheduler, and kubelet client certificates will be used to generate client authentication configuration files in the next lab.
