@@ -29,46 +29,93 @@ alat dan bahan ambyarr:
 
 * Dan untuk membangun tiap node nya saya menggunakan [LXC Container](https://ammarun.my.id/ngoprek/server/cloud/lxc/container/lxd-containers-hypervisor/) yang sebelumnya sudah pernah saya tulis.
 
+### Membuat tiap node k8s
+Pertama kita membuat profile lxc untuk tiap node container k8s,
+
 ```s
-root@palo:/home# lxc version
-Client version: 3.0.3
-Server version: 3.0.3
-root@palo:/home# lxc list
+lxc profile create k8s
+lxc profile edit k8s
+
+###
+config:
+  limits.cpu: "2"
+  limits.memory: 2GB
+  limits.memory.swap: "false"
+  linux.kernel_modules: ip_tables,ip6_tables,netlink_diag,nf_nat,overlay
+  raw.lxc: "lxc.apparmor.profile=unconfined\nlxc.cap.drop= \nlxc.cgroup.devices.allow=a\nlxc.mount.auto=proc:rw
+    sys:rw"
+  security.nesting: "true"
+  security.privileged: "true"
+description: LXD profile for Kubernetes
+devices:
+  eth0:
+    name: eth0
+    nictype: bridged
+    parent: lxdbr0
+    type: nic
+  root:
+    path: /
+    pool: default
+    type: disk
+name: k8s
+used_by: []
+###
+```
+
+Kedua kita membuat tiap node container k8s,
+```s
+lxc launch images:centos/7 haproxy 
+lxc launch ubuntu:18.04 controller-0 --profile k8s
+lxc launch ubuntu:18.04 controller-1 --profile k8s
+lxc launch ubuntu:18.04 controller-2 --profile k8s
+
+lxc launch ubuntu:18.04 worker-0 --profile k8s
+lxc launch ubuntu:18.04 worker-1 --profile k8s
+lxc launch ubuntu:18.04 worker-2 --profile k8s
+```
+
+cek node dengan `lxc list`,
+```s
+lxc list
+
+###
 +--------------+---------+---------------------+------+------------+-----------+
 |     NAME     |  STATE  |        IPV4         | IPV6 |    TYPE    | SNAPSHOTS |
 +--------------+---------+---------------------+------+------------+-----------+
-| controller-0 | RUNNING | 10.240.0.208 (eth0) |      | PERSISTENT | 0         |
+| controller-0 | RUNNING | 10.240.0.88 (eth0)  |      | PERSISTENT | 0         |
 +--------------+---------+---------------------+------+------------+-----------+
-| controller-1 | RUNNING | 10.240.0.215 (eth0) |      | PERSISTENT | 0         |
+| controller-1 | RUNNING | 10.240.0.161 (eth0) |      | PERSISTENT | 0         |
 +--------------+---------+---------------------+------+------------+-----------+
-| controller-2 | RUNNING | 10.240.0.232 (eth0) |      | PERSISTENT | 0         |
+| controller-2 | RUNNING | 10.240.0.39 (eth0)  |      | PERSISTENT | 0         |
 +--------------+---------+---------------------+------+------------+-----------+
-| haproxy      | RUNNING | 10.240.0.254 (eth0) |      | PERSISTENT | 0         |
+| haproxy      | RUNNING | 10.240.0.62 (eth0)  |      | PERSISTENT | 0         |
 +--------------+---------+---------------------+------+------------+-----------+
-| worker-0     | RUNNING | 10.240.0.244 (eth0) |      | PERSISTENT | 0         |
+| worker-0     | RUNNING | 10.240.0.79 (eth0)  |      | PERSISTENT | 0         |
 +--------------+---------+---------------------+------+------------+-----------+
-| worker-1     | RUNNING | 10.240.0.248 (eth0) |      | PERSISTENT | 0         |
+| worker-1     | RUNNING | 10.240.0.245 (eth0) |      | PERSISTENT | 0         |
 +--------------+---------+---------------------+------+------------+-----------+
-| worker-2     | RUNNING | 10.240.0.210 (eth0) |      | PERSISTENT | 0         |
+| worker-2     | RUNNING | 10.240.0.175 (eth0) |      | PERSISTENT | 0         |
 +--------------+---------+---------------------+------+------------+-----------+
+###
 ```
 
-> Disini saya membuat sebanuak 7 node Container haproxy(Centos7) akan berperan sebagai loadbalancer ke setiap node controller(Ubuntu:18.04) dan worker(Ubuntu:18.04). 
+> Disini saya membuat sebanyak 7 node Container haproxy(Centos7) akan berperan sebagai loadbalancer ke setiap node controller(Ubuntu:18.04) dan worker(Ubuntu:18.04). 
 
 Pertama kita setup Loadbalancer HAproxy nya duls :
 
 Masuk ke container haproxy dan install paket haproxy
 ```s
 root@palo:/home/ngoprek# lxc exec haproxy bash 
-[root@haproxy ~]# yum install -y haproxy net-tools 
+[root@haproxy ~]# yum install -y haproxy net-tools nano
 ```
 
 Edit file konfigurasi haproxy, dan hapus bagian frontend sampai bawah lalu tambahkan,
 ```s
-[root@haproxy haproxy]# nano haproxy.cfg
+nano /etc/haproxy/haproxy.cfg 
 
+###
 frontend k8s
-  bind 10.240.0.254:6443
+  bind 10.240.0.62:6443
   mode tcp
   default_backend k8s
 
@@ -77,32 +124,33 @@ backend k8s
   mode tcp
   option tcplog
   option tcp-check
-  server controller-0 10.240.0.208:6443 check
-  server controller-0 10.240.0.215:6443 check
-  server controller-0 10.240.0.2232:6443 check
+  server controller-0 10.240.0.88:6443 check
+  server controller-1 10.240.0.161:6443 check
+  server controller-2 10.240.0.39:6443 check
+###
 ```
 
 Up service haproxy dan check,
 ```s
-[root@haproxy haproxy]# systemctl enable haproxy
-[root@haproxy haproxy]# systemctl start haproxy
-[root@haproxy haproxy]# systemctl status haproxy
-[root@haproxy haproxy]# netstat -nltp
+systemctl enable haproxy
+systemctl start haproxy
+systemctl status haproxy
+netstat -nltp
+
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 10.240.0.254:6443       0.0.0.0:*               LISTEN      586/haproxy         
-[root@haproxy haproxy]# 
+tcp        0      0 10.240.0.62:6443       0.0.0.0:*               LISTEN      586/haproxy         
 ```
 oke sudah selesai di setup haproxy nya lanjut ke node controller dan node worker ya lainnya,
 
 Lab ini akan saya bagi beberapa part supaya tidak numpuk karena banyak service2 yang dibutuhkan uhuy :
 
 * [Setup Lab Kubernetes Jalan Ninjaku](#)
-* [Installing the Client Tools - Part 1](docs/02-client-tools.md)
+* [Installing the Client Tools - Part 1](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Installing-the-client-Tools-part1/)
+* [Provisioning the CA and Generating TLS Certificates - Part 2](docs/04-certificate-authority.md)
 * [Cooming soon ~](#)
 
 <!-- * [Provisioning Compute Resources](docs/03-compute-resources.md)
-* [Provisioning the CA and Generating TLS Certificates](docs/04-certificate-authority.md)
 * [Generating Kubernetes Configuration Files for Authentication](docs/05-kubernetes-configuration-files.md)
 * [Generating the Data Encryption Config and Key](docs/06-data-encryption-keys.md)
 * [Bootstrapping the etcd Cluster](docs/07-bootstrapping-etcd.md)
@@ -114,6 +162,7 @@ Lab ini akan saya bagi beberapa part supaya tidak numpuk karena banyak service2 
 * [Smoke Test](docs/13-smoke-test.md)
 * [Cleaning Up](docs/14-cleanup.md) -->
 
+## Gaskunnnn
 
 **Referensi**
 * [https://github.com/kelseyhightower/kubernetes-the-hard-way/tree/1.12.0](https://github.com/kelseyhightower/kubernetes-the-hard-way/tree/1.12.0)
