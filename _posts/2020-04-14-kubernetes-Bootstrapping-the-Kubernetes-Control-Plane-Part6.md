@@ -1,6 +1,6 @@
 ---
 title: "[Kubernetes The Hard Way] Bootstrapping the Kubernetes Control Plane - Part 6"
-date: 2020-04-13
+date: 2020-04-14
 categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
   - Jekyll
@@ -245,7 +245,7 @@ subjects:
     name: kubernetes
 EOF
 ```
-Lanjutnye: [Bootstrapping the Kubernetes Worker Nodes - Part 7](03-compute-resources.md)
+Lanjutnye: [Bootstrapping the Kubernetes Worker Nodes - Part 7](https://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Bootstrapping-the-Kubernetes-Worker-Nodes-Part7/)
 
 ## Gaskunnnn
 

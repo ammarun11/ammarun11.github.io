@@ -47,7 +47,7 @@ for instance in controller-0 controller-1 controller-2; do
   lxc file push encryption-config.yaml ${instance}/root/
 done
 ```
-Lanjutnye: [Bootstrapping the etcd Cluster - Part 5](03-compute-resources.md)
+Lanjutnye: [Bootstrapping the etcd Cluster - Part 5](https://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Bootstrapping-the-etcd-Cluster-Part5/)
 
 ## Gaskunnnn
 

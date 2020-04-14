@@ -1,6 +1,6 @@
 ---
 title: "[Kubernetes The Hard Way] Bootstrapping the etcd Cluster - Part 5"
-date: 2020-04-13
+date: 2020-04-14
 categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
   - Jekyll
@@ -126,7 +126,7 @@ af41a37119e396e0, started, controller-2, https://10.240.0.39:2380, https://10.24
 c8c1068e70981ee2, started, controller-0, https://10.240.0.88:2380, https://10.240.0.88:2379
 ```
 
-Lanjutnye: [Bootstrapping the Kubernetes Control Plane - Part 6](03-compute-resources.md)
+Lanjutnye: [Bootstrapping the Kubernetes Control Plane - Part 6](https://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Bootstrapping-the-Kubernetes-Control-Plane-Part6/)
 
 ## Gaskunnnn
 

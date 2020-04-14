@@ -384,7 +384,7 @@ lxc exec worker-0 ls
 
 > The kube-proxy, kube-controller-manager, kube-scheduler, and kubelet client certificates will be used to generate client authentication configuration files in the next lab.
 
-Lanjutnye: [Generating Kubernetes Configuration Files for Authentication - Part 3](03-compute-resources.md)
+Lanjutnye: [Generating Kubernetes Configuration Files for Authentication - Part 3](https://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Generating-Kubernetes-Configuration-Files-for-Authentication-Part3/)
 
 ## Gaskunnnn
 

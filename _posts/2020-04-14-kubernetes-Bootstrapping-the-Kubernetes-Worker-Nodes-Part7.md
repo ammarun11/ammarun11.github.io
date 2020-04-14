@@ -1,6 +1,6 @@
 ---
 title: "[Kubernetes The Hard Way] Bootstrapping the Kubernetes Worker Nodes - Part 7"
-date: 2020-04-13
+date: 2020-04-14
 categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
   - Jekyll

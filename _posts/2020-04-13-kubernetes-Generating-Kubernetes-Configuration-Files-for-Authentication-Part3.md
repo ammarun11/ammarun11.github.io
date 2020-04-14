@@ -191,7 +191,7 @@ lxc exec controller-0 ls
 lxc exec worker-0 ls
 ```
 
-Lanjutnye: [Generating the Data Encryption Config and Key - Part 4](03-compute-resources.md)
+Lanjutnye: [Generating the Data Encryption Config and Key - Part 4](https://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Generating-the-Data-Encryption-Config-and-Key-Part4/)
 
 ## Gaskunnnn
 
