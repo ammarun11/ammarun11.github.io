@@ -1,6 +1,6 @@
 ---
 title: "[Kubernetes The Hard Way] Bootstrapping the etcd Cluster - Part 5"
-date: 2020-04-14
+date: 2020-04-13
 categories: [ngoprek, server, cloud, kubernetes, container]
 tags:
   - Jekyll

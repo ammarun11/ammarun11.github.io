@@ -296,7 +296,7 @@ worker-0   Ready    <none>   6m44s   v1.12.0   10.240.0.79    <none>        Ubun
 worker-1   Ready    <none>   6m43s   v1.12.0   10.240.0.245   <none>        Ubuntu 18.04.4 LTS   5.0.0-1036-azure   containerd://1.2.0-rc.0
 worker-2   Ready    <none>   6m43s   v1.12.0   10.240.0.175   <none>        Ubuntu 18.04.4 LTS   5.0.0-1036-azure   containerd://1.2.0-rc.0
 ```
-Lanjutnye: [Provisioning Pod Network Routes - Part 8](#)
+Lanjutnye: [Provisioning Pod Network Routes - Part 8](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-part8/)
 
 ## Gaskunnnn
 

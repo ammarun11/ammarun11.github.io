@@ -30,9 +30,9 @@ kubectl run myshell -it --rm --image busybox -- sh
 kubectl run myshell2 -it --rm --image busybox -- sh
 ```
 > Output hasil watch kubectl 
-```s
-Every 2.0s: kubectl get pods -o wide                                palo-server0: Tue Apr 14 02:10:35 2020:18 2020                                                                                             palo-server0: Tue Apr 14 02:04:16 2020
 
+```s
+Every 2.0s: kubectl get pods -o wide                                palo-server0: Tue Apr 14 02:10:35 2020:18
 NAME                        READY   STATUS    RESTARTS   AGE     IP           NODE       NOMINATED NODE   
 myshell-58f4c7bc6b-szbrd    1/1     Running   0          6s      10.200.2.4   worker-2   <none>
 myshell2-6f8cc4f49d-sff8w   1/1     Running   0          3m40s   10.200.0.2   worker-0   <none>
@@ -65,6 +65,7 @@ Cek
 ip route show
 ```
 > Output 
+
 ```s
 root@palo-server0:~# ip route show
 default via 10.0.0.1 dev eth0
@@ -85,6 +86,7 @@ kubectl run myshell -it --rm --image busybox -- sh
 kubectl run myshell2 -it --rm --image busybox -- sh
 ```
 > output
+
 ```s
 Every 2.0s: kubectl get pods -o wide                            palo-server0: Tue Apr 14 02:18:44 2020
 
@@ -94,6 +96,7 @@ myshell2-6f8cc4f49d-qxwrm   1/1     Running   0          68s   10.200.2.5   work
 ```
 
 Verification 
+
 ```s
 / # ping 10.200.2.5
 PING 10.200.2.5 (10.200.2.5): 56 data bytes
@@ -113,7 +116,7 @@ DONE Sekarang POD tiap Nodes terhubung.
 
 
 
-Lanjutnye: [Deploying the DNS Cluster Add-on - FinalPart 9](#)
+Lanjutnye: [Deploying the DNS Cluster Add-on - FinalPart 9](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-part9/)
 
 ## Gaskunnnn
 

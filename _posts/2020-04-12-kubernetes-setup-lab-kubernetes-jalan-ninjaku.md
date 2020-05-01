@@ -153,12 +153,8 @@ Lab ini akan saya bagi beberapa part supaya tidak numpuk karena banyak service2 
 * [Bootstrapping the etcd Cluster - Part 5](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Bootstrapping-the-etcd-Cluster-Part5/)
 * [Bootstrapping the Kubernetes Control Plane - Part 6](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Bootstrapping-the-Kubernetes-Control-Plane-Part6/)
 * [Bootstrapping the Kubernetes Worker Nodes - Part 7](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-Bootstrapping-the-Kubernetes-Worker-Nodes-Part7/)
-
-
-* [Cooming soon :](#)
-
-- [Provisioning Pod Network Routes](docs/11-pod-network-routes.md)
-- [Deploying the DNS Cluster Add-on](docs/12-dns-addon.md)
+- [Provisioning Pod Network Routes - Part 8](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-part8/)
+- [Deploying the DNS Cluster Add-on - Part 9](http://ammarun.my.id/ngoprek/server/cloud/kubernetes/container/kubernetes-part9/)
 - [Smoke Test](docs/13-smoke-test.md)
 - [Cleaning Up](docs/14-cleanup.md)
 

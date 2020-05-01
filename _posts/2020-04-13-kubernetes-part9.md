@@ -42,6 +42,7 @@ cek namespaces system,
 kubectl -n kube-system get all
 ```
 > Output 
+
 ```s
 NAME                           READY   STATUS    RESTARTS   AGE
 pod/coredns-788cdf8b7b-dxpxp   1/1     Running   0          46s
@@ -67,10 +68,12 @@ List the pod created by the busybox deployment:
 kubectl get pods -l run=busybox
 ```
 > output
+
 ```s
 NAME                      READY   STATUS    RESTARTS   AGE
 busybox-bd8fb7cbd-vflm9   1/1     Running   0          10s
 ```
+
 Retrieve the full name of the busybox pod:
 ```s
 POD_NAME=$(kubectl get pods -l run=busybox -o jsonpath="{.items[0].metadata.name}")
@@ -79,14 +82,19 @@ Execute a DNS lookup for the kubernetes service inside the busybox pod:
 ```s
 kubectl exec -ti $POD_NAME -- nslookup kubernetes
 ```
+
 > output
+
+```s
 Server:    10.32.0.10
 Address 1: 10.32.0.10 kube-dns.kube-system.svc.cluster.local
 
 Name:      kubernetes
 Address 1: 10.32.0.1 kubernetes.default.svc.cluster.local
-Lanjutnye: [Deploying the DNS Cluster Add-on - FinalPart 9](#)
+```
 
+
+Lanjutnye: [SMOKE-TEST](#)
 ## Gaskunnnn
 
 **Referensi**
