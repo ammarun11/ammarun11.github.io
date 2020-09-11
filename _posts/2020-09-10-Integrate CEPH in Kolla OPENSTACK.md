@@ -98,7 +98,8 @@ kolla-genpwd
 
 ### Configure inventory
 > nano multinode
-```bash
+
+```
 [control]
 am-os01
 
@@ -114,9 +115,10 @@ am-os0[1:3]
 [storage]
 am-os0[1:3]
 ```
-
 ### setup globals.yaml kolla-ansible
+
 > nano /etc/kolla/globals.yml
+
 ```bash
 ---
 kolla_base_distro: "ubuntu"
