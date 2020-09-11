@@ -45,6 +45,7 @@ for i in {1..3}; do
   for node in os0 ; do
     ssh root@am-${node}${i} parted /dev/vdb -s -- mklabel gpt mkpart KOLLA_CEPH_OSD_BOOTSTRAP_BS 1 -1
     ssh root@am-${node}${i} parted /dev/vdc -s -- mklabel gpt mkpart KOLLA_CEPH_OSD_BOOTSTRAP_BS 1 -1
+    ssh root@am-${node}${i} parted /dev/vdd -s -- mklabel gpt mkpart KOLLA_CEPH_OSD_BOOTSTRAP_BS 1 -1
   done
 done
 ```
