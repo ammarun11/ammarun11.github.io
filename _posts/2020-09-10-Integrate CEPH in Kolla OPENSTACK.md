@@ -164,8 +164,16 @@ source /etc/kolla/admin-openrc.sh
 openstack hypervisor list
 ```
 ### inti-runonce edit network with ext-net
+# inti-runonce dan edit network with ext-net
 ```
-./init-runone
+cp /usr/local/share/kolla-ansible/init-runonce .
+```
+# ubah variable network sesuaikan dengan network external klen
+
+> nano init-runonce
+
+```
+./init-runonece
 ```
 
 ### Add Ceph Repository
@@ -199,7 +207,7 @@ rbd -p images ls
 ### Creating Openstack Cinder Volume (Storaed on Ceph RBD) -Attaching this volume to openstack instance
 
 ```bash
-openstack server create  --image e$image  --flavor m1.tiny  --key-name mykey  --network demo-net $nameVM
+openstack server create  --image $image  --flavor m1.tiny  --key-name mykey  --network demo-net $nameVM
 ```
 
 ### Mount volume 
