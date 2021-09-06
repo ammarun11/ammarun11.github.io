@@ -49,7 +49,8 @@ wget -c https://developers.redhat.com/content-gateway/rest/mirror/pub/openshift-
 
 2. On Red Hat Enterprise Linux/CentOS 8, assuming the archive is in the ~/Downloads directory, follow these steps:
 
-    Extract the contents of the archive:
+Extract the contents of the archive:
+
 ```
 $ cd ~/Downloads
 $ tar xvf crc-linux-amd64.tar.xz
@@ -65,9 +66,9 @@ $ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 
 3. Setting up CodeReady Containers
 
-    The crc setup command performs operations to set up the environment of your host machine for the CodeReady Containers virtual machine.
+The crc setup command performs operations to set up the environment of your host machine for the CodeReady Containers virtual machine.
 
-    This procedure will create the ~/.crc directory if it does not already exist.
+This procedure will create the ~/.crc directory if it does not already exist.
 Set up your host machine for CodeReady Containers:
 
 ```
