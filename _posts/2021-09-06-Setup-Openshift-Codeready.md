@@ -24,7 +24,7 @@ Detail Environtment we are using:
 
 ### Required software packages for Linux
 
-```s
+```
 Red Hat Enterprise Linux/CentOS
 
 su -c 'yum install NetworkManager'
@@ -33,9 +33,8 @@ su -c 'yum install NetworkManager'
 ### Installing Openshift RedHat CodeReady
 
 0. Make sure you're setup with non-root user, then give non-root user access to manage systemd
-```
-# su student
 
+```
 $ export XDG_RUNTIME_DIR=/run/user/`id -u`
 $ sudo systemctl restart systemd-logind.service
 $ loginctl enable-linger student
