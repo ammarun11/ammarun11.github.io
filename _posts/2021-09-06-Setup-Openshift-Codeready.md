@@ -1,5 +1,5 @@
 ---
-title: "[Openshift]Setup and Installation Openshift RedHat Codeready"
+title: "[Openshift] Setup and Installation Openshift RedHat Codeready"
 date: 2021-09-06
 categories: [ngoprek, server, cloud, openshift, container]
 tags:
