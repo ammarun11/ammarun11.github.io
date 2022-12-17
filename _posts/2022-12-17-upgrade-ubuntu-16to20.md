@@ -1,7 +1,7 @@
 ---
 title: "[Ubuntu] Upgrade Ubuntu 16 LTS to Ubuntu 20 LTS"
 date: 2022-12-17
-categories: [ngoprek, server, cloud, ceph, storage]
+categories: [ngoprek, server, cloud, ubuntu, storage]
 tags:
   - Jekyll
   - update
