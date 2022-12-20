@@ -663,10 +663,12 @@ rm .ovnnb_db.db.~lock .ovnsb_db.db.~lock ovnnb_db.db ovnsb_db.db
 - Start service ovn-central alternately start from master.
 systemctl start ovn-central.service
 
+```bash
 systemctl status ovn-central
 systemctl status ovn-northd
 systemctl status ovn-sb-ovsdb
 systemctl status ovn-nb-ovsdb
+```
 
 ###### 6. Deploy octavia
 
