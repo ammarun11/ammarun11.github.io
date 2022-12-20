@@ -1,6 +1,6 @@
 ---
 title: "[Openshift] Deploy Openshift 4.7"
-date: 2022-12-18
+date: 2022-12-20
 categories: [ngoprek, server, cloud, kubernetes, openshift]
 tags:
   - Jekyll
