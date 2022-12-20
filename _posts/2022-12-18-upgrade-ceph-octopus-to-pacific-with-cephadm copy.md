@@ -8,60 +8,65 @@ tags:
 ---
 
 #### Spesification
-| Hostname	| VCPUs |  RAM | DISK |
-|-|-|-|-|
-lab-r01-oscontroller-01|8|32|100Gb x2
-lab-r02-oscontroller-02|8|32|100Gb x2
-lab-r03-oscontroller-03|8|32|100Gb x2
-lab-r01-oscompute-01|16|32|100Gb x6
-lab-r01-oscompute-02|16|32|100Gb x6
-lab-r01-oscompute-02|16|32|100Gb x6
+
+| Hostname | VCPUs | RAM | DISK |
+| --- | --- | --- | --- |
+| lab-r01-oscontroller-01 | 8 | 32 | 100Gb x2 |
+| lab-r02-oscontroller-02 | 8 | 32 | 100Gb x2 |
+| lab-r03-oscontroller-03 | 8 | 32 | 100Gb x2 |
+| lab-r01-oscompute-01 | 16 | 32 | 100Gb x6 |
+| lab-r01-oscompute-02 | 16 | 32 | 100Gb x6 |
+| lab-r01-oscompute-02 | 16 | 32 | 100Gb x6 |
+
 
 #### Network Mapping
-Compute|Interface Name|Role|IP
-|-|-|-|-|
-lab-r01-oscontroller-01|ens3|Management Network & Public API Network|172.18.251.11
-lab-r01-oscontroller-01|ens4|Internal and Admin API Network|172.18.236.11
-lab-r01-oscontroller-01|ens5|Self-service Network|172.18.237.11
-lab-r01-oscontroller-01|ens6|External Provider Prod Network|not-assigned
-lab-r01-oscontroller-01|ens7|External Provider Dev Network|not-assigned
-lab-r01-oscontroller-01|ens8|Storage Ceph Public Network|172.18.238.11
-lab-r01-oscontroller-01|ens9|Storage Ceph Cluster Network|172.18.239.11
-lab-r02-oscontroller-02|ens3|Management Network & Public API Network|172.18.251.12
-lab-r02-oscontroller-02|ens4|Internal and Admin API Network|172.18.236.12
-lab-r02-oscontroller-02|ens5|Self-service Network|172.18.237.12
-lab-r02-oscontroller-02|ens6|External Provider Prod Network|not-assigned
-lab-r02-oscontroller-02|ens7|External Provider Dev Network|not-assigned
-lab-r02-oscontroller-02|ens8|Storage Ceph Public Network|172.18.238.12
-lab-r02-oscontroller-02|ens9|Storage Ceph Cluster Network|172.18.239.12
-lab-r03-oscontroller-03|ens3|Management Network & Public API Network|172.18.251.13
-lab-r03-oscontroller-03|ens4|Internal and Admin API Network|172.18.236.13
-lab-r03-oscontroller-03|ens5|Self-service Network|172.18.237.13
-lab-r03-oscontroller-03|ens6|External Provider Prod Network|not-assigned
-lab-r03-oscontroller-03|ens7|External Provider Dev Network|not-assigned
-lab-r03-oscontroller-03|ens8|Storage Ceph Public Network|172.18.238.13
-lab-r03-oscontroller-03|ens9|Storage Ceph Cluster Network|172.18.239.13
-lab-r01-oscompute-01|ens3|Management Network & Public API Network|172.18.251.21
-lab-r01-oscompute-01|ens4|Internal and Admin API Network|172.18.236.21
-lab-r01-oscompute-01|ens5|Self-service Network|172.18.237.21
-lab-r01-oscompute-01|ens6|External Provider Prod Network|172.18.216.21
-lab-r01-oscompute-01|ens7|External Provider Dev Network|172.18.224.21
-lab-r01-oscompute-01|ens8|Storage Ceph Public Network|172.18.238.21
-lab-r01-oscompute-01|ens9|Storage Ceph Cluster Network|172.18.239.21
-lab-r01-oscompute-02|ens3|Management Network & Public API Network|172.18.251.22
-lab-r01-oscompute-02|ens4|Internal and Admin API Network|172.18.236.22
-lab-r01-oscompute-02|ens5|Self-service Network|172.18.237.22
-lab-r01-oscompute-02|ens6|External Provider Prod Network|172.18.216.22
-lab-r01-oscompute-02|ens7|External Provider Dev Network|172.18.224.22
-lab-r01-oscompute-02|ens8|Storage Ceph Public Network|172.18.238.22
-lab-r01-oscompute-02|ens9|Storage Ceph Cluster Network|172.18.239.22
-lab-r01-oscompute-03|ens3|Management Network & Public API Network|172.18.251.23
-lab-r01-oscompute-03|ens4|Internal and Admin API Network|172.18.236.23
-lab-r01-oscompute-03|ens5|Self-service Network|172.18.237.23
-lab-r01-oscompute-03|ens6|External Provider Prod Network|172.18.216.23
-lab-r01-oscompute-03|ens7|External Provider Dev Network|172.18.224.23
-lab-r01-oscompute-03|ens8|Storage Ceph Public Network|172.18.238.23
-lab-r01-oscompute-03|ens9|Storage Ceph Cluster Network|172.18.239.23
+#### Network Mapping
+
+| Compute | Interface Name | Role | IP |
+| --- | --- | --- | --- |
+| lab-r01-oscontroller-01 | ens3 | Management Network & Public API Network | 172.18.251.11 |
+| lab-r01-oscontroller-01 | ens4 | Internal and Admin API Network | 172.18.236.11 |
+| lab-r01-oscontroller-01 | ens5 | Self-service Network | 172.18.237.11 |
+| lab-r01-oscontroller-01 | ens6 | External Provider Prod Network | not-assigned |
+| lab-r01-oscontroller-01 | ens7 | External Provider Dev Network | not-assigned |
+| lab-r01-oscontroller-01 | ens8 | Storage Ceph Public Network | 172.18.238.11 |
+| lab-r01-oscontroller-01 | ens9 | Storage Ceph Cluster Network | 172.18.239.11 |
+| lab-r02-oscontroller-02 | ens3 | Management Network & Public API Network | 172.18.251.12 |
+| lab-r02-oscontroller-02 | ens4 | Internal and Admin API Network | 172.18.236.12 |
+| lab-r02-oscontroller-02 | ens5 | Self-service Network | 172.18.237.12 |
+| lab-r02-oscontroller-02 | ens6 | External Provider Prod Network | not-assigned |
+| lab-r02-oscontroller-02 | ens7 | External Provider Dev Network | not-assigned |
+| lab-r02-oscontroller-02 | ens8 | Storage Ceph Public Network | 172.18.238.12 |
+| lab-r02-oscontroller-02 | ens9 | Storage Ceph Cluster Network | 172.18.239.12 |
+| lab-r03-oscontroller-03 | ens3 | Management Network & Public API Network | 172.18.251.13 |
+| lab-r03-oscontroller-03 | ens4 | Internal and Admin API Network | 172.18.236.13 |
+| lab-r03-oscontroller-03 | ens5 | Self-service Network | 172.18.237.13 |
+| lab-r03-oscontroller-03 | ens6 | External Provider Prod Network | not-assigned |
+| lab-r03-oscontroller-03 | ens7 | External Provider Dev Network | not-assigned |
+| lab-r03-oscontroller-03 | ens8 | Storage Ceph Public Network | 172.18.238.13 |
+| lab-r03-oscontroller-03 | ens9 | Storage Ceph Cluster Network | 172.18.239.13 |
+| lab-r01-oscompute-01 | ens3 | Management Network & Public API Network | 172.18.251.21 |
+| lab-r01-oscompute-01 | ens4 | Internal and Admin API Network | 172.18.236.21 |
+| lab-r01-oscompute-01 | ens5 | Self-service Network | 172.18.237.21 |
+| lab-r01-oscompute-01 | ens6 | External Provider Prod Network | 172.18.216.21 |
+| lab-r01-oscompute-01 | ens7 | External Provider Dev Network | 172.18.224.21 |
+| lab-r01-oscompute-01 | ens8 | Storage Ceph Public Network | 172.18.238.21 |
+| lab-r01-oscompute-01 | ens9 | Storage Ceph Cluster Network | 172.18.239.21 |
+| lab-r01-oscompute-02 | ens3 | Management Network & Public API Network | 172.18.251.22 |
+| lab-r01-oscompute-02 | ens4 | Internal and Admin API Network | 172.18.236.22 |
+| lab-r01-oscompute-02 | ens5 | Self-service Network | 172.18.237.22 |
+| lab-r01-oscompute-02 | ens6 | External Provider Prod Network | 172.18.216.22 |
+| lab-r01-oscompute-02 | ens7 | External Provider Dev Network | 172.18.224.22 |
+| lab-r01-oscompute-02 | ens8 | Storage Ceph Public Network | 172.18.238.22 |
+| lab-r01-oscompute-02 | ens9 | Storage Ceph Cluster Network | 172.18.239.22 |
+| lab-r01-oscompute-03 | ens3 | Management Network & Public API Network | 172.18.251.23 |
+| lab-r01-oscompute-03 | ens4 | Internal and Admin API Network | 172.18.236.23 |
+| lab-r01-oscompute-03 | ens5 | Self-service Network | 172.18.237.23 |
+| lab-r01-oscompute-03 | ens6 | External Provider Prod Network | 172.18.216.23 |
+| lab-r01-oscompute-03 | ens7 | External Provider Dev Network | 172.18.224.23 |
+| lab-r01-oscompute-03 | ens8 | Storage Ceph Public Network | 172.18.238.23 |
+| lab-r01-oscompute-03 | ens9 | Storage Ceph Cluster Network | 172.18.239.23 |
+
 
 Services|VIP
 -|-
@@ -83,6 +88,7 @@ ens9|Storage Ceph Cluster Network|172.18.239.0/24|172.18.239.0-254
 #### Ceph Deployment
 ###### 1. Copy SSH key each node
 ###### 2. Configure `/etc/host`
+
 ```bash
 172.18.251.11 lab-r01-oscontroller-01
 172.18.251.12 lab-r02-oscontroller-02
@@ -93,21 +99,25 @@ ens9|Storage Ceph Cluster Network|172.18.239.0/24|172.18.239.0-254
 ```
 
 ###### 3. Update & Upgrade package
+
 ```bash
 apt update -y && apt install python3 python3-pip
 ```
 
 ###### 4. Install Ansible
+
 ```bash
 pip3 install ansible
 ```
 
 ###### 5. Git Clone Repo
+
 ```bash
 git clone https://go.lab.id/ammar/ansible-iac-ceph-openstack.git
 ```
 
 ###### 6. Adjust Vars with enviroment (`/ansible-iac-ceph-openstack-main/Ceph-Manual-Ansible/group_vars/all.yml`)
+
 ```bash
 cluster_name: ceph
 cluster_storage_interface: ens9 # lab environment
@@ -142,6 +152,7 @@ devices:
 ```
  
 ###### 7. adjust Inventory with  environment (`/ansible-iac-ceph-openstack-main/Ceph-Manual-Ansible/inventory/hosts`)
+
 ```bash
 [deployer]
 172.18.251.11
@@ -161,6 +172,7 @@ devices:
 ```
 
 ###### 8. Disable role task not used (`/ansible-iac-ceph-openstack-main/Ceph-Manual-Ansible/roles/mgr/tasks/main.yml`)
+
 ```bash
 ---- 
 #- name: Enable msgr2
@@ -170,33 +182,39 @@ devices:
 ```
 
 ###### 9. Check Connection each Node
+
 ```bash
 ansible all -m ping
 ```
 
 ###### 10. Boostrap Node
+
 ```bash
 ansible-playbook bootstrap.yml
 ```
 
 ###### 11. Deploy Ansible ceph
+
 ```bash
 ansible-playbook site.yml
 ```
 
 ###### 12. add config if mon 2 & 3 not added at config `/etc/ceph/ceph.conf`
+
 ```bash
 mon initial members = lab-r01-oscontroller-01, lab-r02-oscontroller-02, lab-r03-oscontroller-03
 mon host = 172.18.238.11, 172.18.238.12, 172.18.238.13
 ```
 
 ###### 13. Restart Ceph Mon 2,3 & 1 (non-leader first)
+
 ```bash
 systemctl restart ceph-mon@<hostname>.service
 ```	
 
 #### Openstack Deployment
 ###### 1. adjust Vars at environment (`/ansible-iac-ceph-openstack-main/OS-Ansible/group_vars/all.yml`)
+
 ```bash
 ---
 #########
@@ -278,6 +296,7 @@ ca_private_key_passphrase: "octavia!lab"
 ```
 
 ###### 2. add Template `50-server.cnf.j2` at folder below (`/ansible-iac-ceph-openstack-main/OS-Ansible/roles/mariadb/templates/`)
+
 ```bash
 [mysqld]
 bind-address = {{ hostvars[inventory_hostname]['ansible_' ~ api_interface]['ipv4']['address'] }}
@@ -286,6 +305,7 @@ collation-server = utf8_general_ci
 ```
 
 ###### 3. add task on mariadb for generate file `50-server.cnf` (`/ansible-iac-ceph-openstack-main/OS-Ansible/roles/mariadb/tasks/ubuntu.yml`)
+
 ```bash
 - name: Create mariadb 50-server.cnf configuration file
   template:
@@ -322,12 +342,15 @@ collation-server = utf8_general_ci
 ```
 
 ###### 4. Deploy Ansible Openstack
+
 ```bash
 ansible-playbook deploy.yml
 ```
 
 ###### 5. Reclustering ovn
 - Backup configuration existing dan add configuration Haproxy. Edit on every controller
+
+
 ```bash
  global
   chroot  /var/lib/haproxy
@@ -536,10 +559,14 @@ listen stats
 ```
 
 - Restart Haproxy with PCS. Execute on of controller
+
+
 ```bash
 pcs resource restart lb-haproxy-clone
 ```
 - check VIP active at which controller, then delete the resource. Execute on of controller
+
+
 ```bash
 ## check VIP active at which controller , look at MASTER. then marked or take a note. dc itu controller3.
 pcs status
@@ -549,6 +576,8 @@ pcs resource delete ovndb_servers-master
 ```
 
 - Stop service ovn-central on all controller and make sure the status actived.
+
+
 ```bash
 systemctl stop ovn-central
 
@@ -557,6 +586,8 @@ systemctl status ovn-central
 
 - Edit configuration default ovn-central on each Controller
 1. Controller 1 (Master)
+
+
 ```bash
 # nano /etc/default/ovn-central
 . . .
@@ -573,6 +604,8 @@ OVN_CTL_OPTS=" \
 ```
 
 2. Controller 2 (Slave)
+
+
 ```bash
 # nano /etc/default/ovn-central
 . . .
@@ -591,6 +624,8 @@ OVN_CTL_OPTS=" \
 ```
 
 3. Controller 3 (Slave)
+
+
 ```bash
 # nano /etc/default/ovn-central
 . . .
@@ -613,6 +648,7 @@ OVN_CTL_OPTS=" \
 > 2. Master must start early (Step 7).
 
 - Backup and delete file DB OVN existing. on all controller
+
 ```bash
 cd /var/lib/ovn/
 
@@ -633,42 +669,50 @@ systemctl status ovn-sb-ovsdb
 systemctl status ovn-nb-ovsdb
 
 ###### 6. Deploy octavia
+
 ```bash
 ansible-playbook deploy.yml -t octavia
 ```
 >Note: if had a error when deploy octavia dashboard you can do step below
 
 - check file apt cache for packet python3-octavia-dashboard
+
 ```bash
 ls -l /var/lib/dpkg/info | grep python3-octavia-dashboard
 ```
 
 - move the package python3-octavia-dashboard to folder `/tmp`
+
 ```bash
 sudo mv /var/lib/dpkg/info/python3-octavia-dashboard.* /tmp/ 
 ```
 
 - delete packet python3-octavia-dashboard
+
 ```bash
 sudo dpkg --remove --force-remove-reinstreq python3-octavia-dashboard 
 ```
 
 - Install package python3-octavia-dashboard
+
 ```bash
 apt install python3-octavia-dashboard 
 ```
 
 - Restart service apache2
+
 ```bash
 sudo systemctl restart apache2 
 ```
 
 ###### 7. Deploy Horizon
+
 ```bash
 ansible-playbook deploy.yml -t horizon
 ```
 
 ###### 8. Create admin-openrc
+
 ```bash
 # vim admin-openrc
 . . .
@@ -684,6 +728,7 @@ export OS_IMAGE_API_VERSION=2
 ```
 
 ###### 9. Create octavia-openrc
+
 ```bash
 # vim octavia-openrc
 . . .
@@ -701,6 +746,7 @@ export OS_VOLUME_API_VERSION=3
 
 ###### 10. Build Amphora image for Octavia
 - Create new task on ansible role octavia (`/root/ansible-iac-ceph-openstack-main/OS-Ansible/roles/octavia/tasks/ubuntu-image.yml`) contents as below ,
+
 ```bash
 - name: clone octavia repository
   git:
@@ -739,6 +785,7 @@ export OS_VOLUME_API_VERSION=3
 ```
 
 - then edit the file task main.yml on role octavia become as below: 
+
 ```bash
 ---
 #- import_tasks: ubuntu-octavia.yml
@@ -746,6 +793,7 @@ export OS_VOLUME_API_VERSION=3
 ```
 
 - Run ansible playbook at file `/root/ansible-iac-ceph-openstack-main/OS-Ansible/octavia.yml`
+
 ```bash
 ansible-playbook octavia.yml
 ```
