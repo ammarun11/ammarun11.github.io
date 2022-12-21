@@ -1,7 +1,7 @@
 ---
 title: "[DevOps] ArgoCD Installation"
 date: 2022-12-21
-categories: [ngoprek, server, cloud, kubernetes, openshift, devops]
+categories: [ngoprek, server, cloud, kubernetes, openshift, devops, argocd]
 tags:
   - Jekyll
   - update
