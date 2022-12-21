@@ -10,6 +10,7 @@ tags:
 ## Guide ## Prerequisites
 
 1. Set default project
+
 ```
 $ gcloud config set project playground-s-11-73835160
 
@@ -20,6 +21,7 @@ Updated property [core/project].
 
 2. Set compute zone  
 Compute zone [list](https://cloud.google.com/compute/docs/regions-zones#available)
+
 ```
 $ gcloud config set compute/zone asia-southeast1-a
 
@@ -29,6 +31,7 @@ Updated property [compute/zone].
 ```
 
 3. Enable Google Container Services
+
 ```
 $ gcloud services enable container.googleapis.com
 
@@ -37,6 +40,7 @@ Operation "operations/acf.p2-98174380011-113d48c4-96d5-457e-9060-da78eaeaf63b" f
 ---
 ```
 4. Get Cluster configuration  
+
 ```
 $ gcloud container get-server-config
 
@@ -82,6 +86,7 @@ validNodeVersions:
 For deploy spesific version `--cluster-version` atau `--release-channel`.
 
 - use `--cluster-version`
+
 ```
 $ gcloud container clusters create gke-1 --num-nodes=1 --cluster-version=1.17.17-gke.1101 --image-type=UBUNTU
 
@@ -92,6 +97,7 @@ k8s-1  asia-southeast1-a  1.17.17-gke.1101  35.185.185.239  e2-medium     1.17.1
 ```
 
 - use `--release-channel`
+
 ```
 $ gcloud container clusters create k8s-1 --release-channel rapid --num-nodes=1
 
@@ -102,6 +108,7 @@ k8s-1  asia-southeast1-a  1.19.7-gke.2503  35.240.168.191  e2-medium     1.19.7-
 ```
 
 6. Get cluster credentials
+
 ```
 $ gcloud container clusters get-credentials k8s-1
 
@@ -112,6 +119,7 @@ kubeconfig entry generated for k8s-1.
 ```
 
 7. Test cluster credentials
+
 ```
 $ kubectl get nodes
 
@@ -122,6 +130,7 @@ gke-k8s-1-default-pool-92a66944-mjfd   Ready    <none>   8m12s   v1.17.17-gke.11
 ```
 
 8. Create hello deployment
+
 ```
 $ kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
 
@@ -131,6 +140,7 @@ deployment.apps/hello-server created
 ```
 
 9. Expose deployment
+
 ```
 $ kubectl expose deployment hello-server --type LoadBalancer --port 80 --target-port 8080
 ---
@@ -139,6 +149,7 @@ service/hello-server exposed
 ```
 
 10. Access `hello-server` deployment.
+
 ```
 $ kubectl get svc hello-server
 
@@ -151,6 +162,7 @@ Access to using web browser or curl : 34.126.118.29
 ```
 
 11. Clean up resources
+
 ```
 $ kubectl delete deployment hello-server
 
@@ -172,6 +184,7 @@ Deleted [https://container.googleapis.com/v1/projects/playground-s-11-73835160/z
 
 ## Build and Deploying Apps
 01. Create Apps 
+
 ```
 mkdir lac-app && cd lac-app 
 vim app.py
@@ -235,6 +248,7 @@ docker push gcr.io/playground-s-11-94c871ea/lac-app-image:v1
 ```
 
 06. Create deployment
+
 ```
 kubectl create deployment lac-app --image=gcr.io/playground-s-11-94c871ea/lac-app-image:v1
 ```
@@ -247,6 +261,7 @@ $ kubectl expose deployment lac-app --type LoadBalancer --port 80 --target-port 
 
 ## Node Pools
 1. Create node pool
+
 ```
 $ gcloud container node-pools create k8s-pool --cluster k8s-1
 
@@ -259,6 +274,7 @@ k8s-pool  e2-medium     100           1.17.17-gke.1101
 ```
 
 2. List polls
+
 ```
 $ gcloud container node-pools list --cluster k8s-1
 
@@ -311,6 +327,7 @@ version: 1.17.17-gke.1101
 ```
 
 4. Get cluster node information
+
 ```
 $ gcloud container clusters get-credentials k8s-1
 $ kubectl get nodes
@@ -325,6 +342,7 @@ gke-k8s-1-k8s-pool-30f4b3cc-r9f5       Ready    <none>   3m15s   v1.17.17-gke.11
 ```
 
 5. Resize Node Pools size
+
 ```
 $ gcloud container clusters resize k8s-1 --node-pool k8s-pool --num-nodes 2
 
@@ -378,6 +396,7 @@ $ kubectl apply -f nginx.yaml
 ```
 
 Show Pods
+
 ```
 $ kubectl get po -o  wide
 
@@ -389,26 +408,31 @@ nginx   1/1     Running   0          2m50s   10.40.2.2   gke-k8s-1-k8s-pool-30f4
 
 ## Windows Node Pools
 1. Enable Google Containers API
+
 ```
 gcloud services enable container.googleapis.com
 ```
 
 2. Create Cluster
+
 ```
 gcloud container clusters create k8s-1 --enable-ip-alias --num-nodes=2 --release-channel stable
 ```
 
 3. Create Windows Node-pool
+
 ```
 gcloud container node-pools create win-pool --cluster=k8s-1 --image-type=windows_ltsc --no-enable-autoupgrade --machine-type=n1-standard-2 --num-nodes=1
 ```
 
 4. Get Cluster Credentials
+
 ```
 gcloud container clusters get-credentials k8s-1
 ```
 
 5. List node
+
 ```
 kubetcl get nodes -o wide
 
@@ -423,6 +447,7 @@ gke-k8s-1-win-pool-6eb842ff-lvsl       Ready    <none>   5m53s   v1.17.17-gke.11
 ```
 
 6. Create windows apps deployment
+
 ```
 vim iis.yaml
 
@@ -457,16 +482,19 @@ kubectl apply -f iis.yaml
 
 
 7. Wait the deployment ready
+
 ```
 kubectl get deployment --watch
 ```
 
 8. Expose deployment
+
 ```
 kubectl expose deployment iis --type=LoadBalancer --name iis --port 80 --target-port 80
 ```
 
 9. Access service external IP
+
 ```
 kubectl get svc iis
 ```
