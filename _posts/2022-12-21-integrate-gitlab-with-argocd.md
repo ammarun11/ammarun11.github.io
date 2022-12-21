@@ -1,5 +1,5 @@
 ---
-title: "[DevOps] ArgoCD Installation"
+title: "[DevOps] Integrate Gitlab and ArgoCD"
 date: 2022-12-21
 categories: [ngoprek, server, cloud, kubernetes, openshift, devops]
 tags:
