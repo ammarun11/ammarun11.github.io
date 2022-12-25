@@ -1,7 +1,7 @@
 ---
 title: "[Azure] Azure Kubernetes Service Architecture"
-date: 2022-12-21
-categories: [ngoprek, server, cloud, kubernetes, gke, devops, ]
+date: 2022-12-26
+categories: [ngoprek, server, cloud, kubernetes, aks, devops, ]
 tags:
   - Jekyll
   - update
@@ -17,7 +17,7 @@ This design document provides a brief and high-level overview of what AKS Engine
 
 ## Architecture Diagram
 
-![Alt text](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/1-aks.jpeg"aks-engine architecture diagram")
+![Alt text](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/1-aks.jpeg "aks-engine architecture diagram")
 
 ## Components
 
