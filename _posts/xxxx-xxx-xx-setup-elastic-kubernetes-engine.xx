@@ -1,0 +1,85 @@
+---
+title: "[AWS] Elastic Kubernetes Engine Setup"
+date: xxx-xx-xx
+categories: [ngoprek, server, cloud, kubernetes, eks, devops, ]
+tags:
+  - Jekyll
+  - update
+---
+
+## Guide ## Prerequisites
+
+## Goes To EKS Homepage
+[Amazon EKS Homepage](https://aws.amazon.com/id/eks/)
+![Dashboard8](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/5-pipeline4.png)
+
+## Goes to Console
+- Create Cluster
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/b2vH62PpugJ8gsDE-image-1663153126599.png)](https://book.btech.id/uploads/images/gallery/2022-09/b2vH62PpugJ8gsDE-image-1663153126599.png)
+
+- Specify Networking
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/3kyjrVrbuaXHl4RM-image-1663153173905.png)](https://book.btech.id/uploads/images/gallery/2022-09/3kyjrVrbuaXHl4RM-image-1663153173905.png)
+
+- Configure Logging
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/eelWYPjE7jqx8uVz-image-1663153197510.png)](https://book.btech.id/uploads/images/gallery/2022-09/eelWYPjE7jqx8uVz-image-1663153197510.png)
+
+- Review & Create
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/ccg5JOI7YtXAMnRT-image-1663153217900.png)](https://book.btech.id/uploads/images/gallery/2022-09/ccg5JOI7YtXAMnRT-image-1663153217900.png)
+
+- Cluster Has Been Provisioned
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/f7goVIEhhwnkevH9-image-1663153247845.png)](https://book.btech.id/uploads/images/gallery/2022-09/f7goVIEhhwnkevH9-image-1663153247845.png)
+
+- Add Compute Node (Create Node Group)
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/Xo5GyDlul7hO9BDK-image-1663153286998.png)](https://book.btech.id/uploads/images/gallery/2022-09/Xo5GyDlul7hO9BDK-image-1663153286998.png)
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/zdHFCBkXYLtYnFDN-image-1663153310449.png)](https://book.btech.id/uploads/images/gallery/2022-09/zdHFCBkXYLtYnFDN-image-1663153310449.png)
+
+- Set Type/Flavor to Compute Node
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/RHBQGzkC67vWymfV-image-1663153336258.png)](https://book.btech.id/uploads/images/gallery/2022-09/RHBQGzkC67vWymfV-image-1663153336258.png)
+
+- Specify Networking
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/ihYUEpHpM4cepZxq-image-1663153354098.png)](https://book.btech.id/uploads/images/gallery/2022-09/ihYUEpHpM4cepZxq-image-1663153354098.png)
+
+- Review, then Create !
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/5HAvimTTGy7q8JGj-image-1663153372855.png)](https://book.btech.id/uploads/images/gallery/2022-09/5HAvimTTGy7q8JGj-image-1663153372855.png)
+
+- Verify
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/PMAylF3ceXtpizOh-image-1663153401772.png)](https://book.btech.id/uploads/images/gallery/2022-09/PMAylF3ceXtpizOh-image-1663153401772.png)
+
+## Integrate with Kubeclient
+- Install AWS CLI
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" 
+apt install unzip 
+unzip awscliv2.zip sudo  
+./aws/install 
+aws configure
+```
+
+- Install Kubectl
+```
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" 
+curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256" 
+echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check 
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl 
+chmod +x kubectl 
+mkdir -p ~/.local/bin 
+mv ./kubectl ~/.local/bin/kubectl 
+kubectl version –client 
+
+sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx 
+sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx 
+sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens 
+
+aws eks update-kubeconfig --region ap-southeast-1 --name cusex-eks 
+```
+
+- Import EKS Kubeconfig
+```
+aws eks update-kubeconfig --region ap-southeast-1 --name <cluster-name>
+```
+
+- Verify
+```
+kubectl get nodes -o wide
+```
+[![](https://book.btech.id/uploads/images/gallery/2022-09/scaled-1680-/737fsZo9oMTtZNSu-image-1663153544142.png)](https://book.btech.id/uploads/images/gallery/2022-09/737fsZo9oMTtZNSu-image-1663153544142.png)
