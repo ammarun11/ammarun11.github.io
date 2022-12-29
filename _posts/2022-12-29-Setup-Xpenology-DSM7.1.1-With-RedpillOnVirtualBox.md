@@ -17,11 +17,11 @@ In it 0.9.2.6 version vmdk.You can decompress the gz file one more time and use 
 
 (Full File)
 
-![https://github.com/pocopico/tinycore-redpill/tree/v0.9.2.6](https://github.com/pocopico/tinycore-redpill/tree/v0.9.2.6)
+[https://github.com/pocopico/tinycore-redpill/tree/v0.9.2.6](https://github.com/pocopico/tinycore-redpill/tree/v0.9.2.6)
  
 
 (i used)
-![https://github.com/pocopico/tinycore-redpill/releases/download/v0.9.2.6/tinycore-redpill.v0.9.2.6.vmdk.gz](https://github.com/pocopico/tinycore-redpill/releases/download/v0.9.2.6/tinycore-redpill.v0.9.2.6.vmdk.gz)
+[https://github.com/pocopico/tinycore-redpill/releases/download/v0.9.2.6/tinycore-redpill.v0.9.2.6.vmdk.gz](https://github.com/pocopico/tinycore-redpill/releases/download/v0.9.2.6/tinycore-redpill.v0.9.2.6.vmdk.gz)
 
 
 ### 2. Unzip the package. We will need tinycore-redpill.v0.9.2.6.vmdk
@@ -83,5 +83,5 @@ sudo reboot
 
 
 Reference
-- https://xpenology.com/forum/topic/62221-tutorial-installmigrate-to-dsm-7x-with-tinycore-redpill-tcrp-loader/
-- https://xpenology.com/forum/topic/60130-redpill-tinycore-loader-installation-guide-for-dsm-71-baremetal/
+- [https://xpenology.com/forum/topic/62221-tutorial-installmigrate-to-dsm-7x-with-tinycore-redpill-tcrp-loader/](https://xpenology.com/forum/topic/62221-tutorial-installmigrate-to-dsm-7x-with-tinycore-redpill-tcrp-loader/)
+- [https://xpenology.com/forum/topic/60130-redpill-tinycore-loader-installation-guide-for-dsm-71-baremetal/](https://xpenology.com/forum/topic/60130-redpill-tinycore-loader-installation-guide-for-dsm-71-baremetal/)
