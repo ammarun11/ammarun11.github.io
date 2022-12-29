@@ -1,5 +1,5 @@
 ---
-title: "[Xpenology] Setup Xpenology DSM 7.1.1 Install on Virtual Box With Redpill"
+title: "[Synology] Setup Xpenology DSM 7.1.1 Install on Virtual Box With Redpill"
 date: 2022-12-29
 categories: [ngoprek, server, cloud, storage, synology, xpenology ]
 tags:
@@ -17,12 +17,11 @@ In it 0.9.2.6 version vmdk.You can decompress the gz file one more time and use 
 
 (Full File)
 
-https://github.com/pocopico/tinycore-redpill/tree/v0.9.2.6
+![https://github.com/pocopico/tinycore-redpill/tree/v0.9.2.6](https://github.com/pocopico/tinycore-redpill/tree/v0.9.2.6)
  
 
 (i used)
-
-https://github.com/pocopico/tinycore-redpill/releases/download/v0.9.2.6/tinycore-redpill.v0.9.2.6.vmdk.gz
+![https://github.com/pocopico/tinycore-redpill/releases/download/v0.9.2.6/tinycore-redpill.v0.9.2.6.vmdk.gz](https://github.com/pocopico/tinycore-redpill/releases/download/v0.9.2.6/tinycore-redpill.v0.9.2.6.vmdk.gz)
 
 
 ### 2. Unzip the package. We will need tinycore-redpill.v0.9.2.6.vmdk
@@ -40,10 +39,11 @@ https://github.com/pocopico/tinycore-redpill/releases/download/v0.9.2.6/tinycore
 ![Dashboard3](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/3-xpenology.png)
 
 4.3 Setup the network:
-a) Bridge or NAT, it's up to you
-b) Expand the Advanced option
-c) Adapter type: Intel PRO/1000 MT Desktop (8254OEM)
-d) MAC Address: 001132CBD5B1 (This is the most important setting to make your Xpenology accesssible!)
+
+a) Bridge or NAT, it's up to you<br>
+b) Expand the Advanced option<br>
+c) Adapter type: Intel PRO/1000 MT Desktop (8254OEM)<br>
+d) MAC Address: 001132CBD5B1 (This is the most important setting to make your Xpenology accesssible!)<br>
 
 ![Dashboard4](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/4-xpenology.png)
 
@@ -80,3 +80,8 @@ sudo reboot
 ### 12. Here you go, do what you usually do to a Synology system to install the DSM.
 
 ![Dashboard6](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/6-xpenology.png)
+
+
+Reference
+- https://xpenology.com/forum/topic/62221-tutorial-installmigrate-to-dsm-7x-with-tinycore-redpill-tcrp-loader/
+- https://xpenology.com/forum/topic/60130-redpill-tinycore-loader-installation-guide-for-dsm-71-baremetal/
