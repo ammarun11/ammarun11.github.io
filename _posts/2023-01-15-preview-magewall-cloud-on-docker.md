@@ -1,6 +1,6 @@
 ---
 title: "[Preview] Setup Docker instance for use with MAGEWELL CLOUD"
-date: 2023-01-14
+date: 2023-01-15
 categories: [ngoprek, server, cloud, docker, magewall]
 tags:
   - Jekyll
