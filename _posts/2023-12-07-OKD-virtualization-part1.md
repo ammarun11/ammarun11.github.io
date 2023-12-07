@@ -54,7 +54,7 @@ Requiremnets,
 
 A few requirements need to be met before you can begin:
 
-- You'll need an OKD cluster or something like OpenShift, you can follow this guide to deploy okd simple way https://ammarun.my.id/ngoprek/server/cloud/openshift/container/Setup-Openshift-Codeready or on prod recommend you can see here too https://ammarun.my.id/ngoprek/server/cloud/kubernetes/openshift/deploy-openshift-cluster/ 
+- You'll need an OKD cluster or something like OpenShift, you can follow this guide to deploy okd simple way [Code Ready Openshift/OKD](https://ammarun.my.id/ngoprek/server/cloud/openshift/container/Setup-Openshift-Codeready) or other deployment guide [Deploy Openshift](https://ammarun.my.id/ngoprek/server/cloud/kubernetes/openshift/deploy-openshift-cluster/)
 - Don't forget to have the kubectl/oc client utility ready to roll.
 
 ## Deploy KubeVirt HyperConverged Cluster Operator from the OperatorHub
