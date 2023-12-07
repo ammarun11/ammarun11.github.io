@@ -75,6 +75,10 @@ Set up your host machine for CodeReady Containers:
 Replace the earlier crc executable with the executable of the latest release. Verify that the new crc executable is in use by checking its version:
 
 $ crc version
+$ crc config set preset okd #optional if you want switch from OCP to OKD
+$ crc config set disk-size 35
+$ crc config set memory 9000
+$ crc config set cpu 4
 
 Set up the new CodeReady Containers release:
 
