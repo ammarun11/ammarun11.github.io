@@ -7,10 +7,7 @@ tags:
   - update
 ---
 
-## Brief
-
 ### OKD 
-
 let's talk about OKD in a simple way. Think of it as a cool platform for building and running apps in containers. Whether you're dealing with just a handful of machines or a massive data center, OKD has your back. It's built on top of Kubernetes, the powerhouse behind stuff like streaming, ecommerce, holding, gaming, and online banking.
 
 The best part? You can use it with Red Hat's open technologies to take your apps beyond one cloud – use 'em on your own servers or in different cloud setups. Flexibility at its finest!"
@@ -43,12 +40,12 @@ So, let's dive into how you can use HCO through a Custom Resource Definition (CR
 Here for the OKD Virtulization Architecture
 
 kubevirt
-![Alt text](image-1.png)
+![Alt text](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/image-1.png)
 
-![Alt text](image-2.png)
+![Alt text](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/image-2.png)
 
 HCO
-![Alt text](image.png)
+![Alt text](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/image.png)
 
 Requiremnets,
 
