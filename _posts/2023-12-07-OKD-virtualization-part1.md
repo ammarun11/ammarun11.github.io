@@ -47,7 +47,7 @@ kubevirt
 HCO
 ![Alt text](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/image.png)
 
-Requiremnets,
+Requirements,
 
 A few requirements need to be met before you can begin:
 
@@ -74,7 +74,7 @@ ok now we create vm with okd virtualization
 
 first create namespace for our workspace vms and go to catalog 
 oh look we've catalog VMs with datasource(datavolume) ready it, so now we can run vms more easy ~
-> DataSource/DataVolume objects are custom resources that are provided by the Containerized Data Importer (CDI) project. Data volumes orchestrate import, clone, and upload operations that are associated with an underlying persistent volume claim (PVC). Data volumes are integrated with OpenShift Virtualization, and they prevent a virtual machine from being started before the PVC has been prepared.
+> DataSource/DataVolume objects are custom resources that are provided by the Containerized Data Importer (CDI) project. Data volumes orchestrate import, clone, and upload operations that are associated with an underlying persistent volume claim (PVC). Data volumes are integrated with OKD/OpenShift Virtualization, and they prevent a virtual machine from being started before the PVC has been prepared.
 
 ```
 oc create ns ammarun
