@@ -12,13 +12,11 @@ Let's continue demonstrating the automation of virtual machines with Tekton pipe
 
 ## Ubuntu VMs
 [![Automate Ubuntu VM with Tekton Pipeline]
-(https://img.youtube.com/vi/mQNSNQnk5BQ/0.jpg)]
-(https://www.youtube.com/watch?v=mQNSNQnk5BQ&t)
+(https://img.youtube.com/vi/mQNSNQnk5BQ/0.jpg)](https://www.youtube.com/watch?v=mQNSNQnk5BQ&t)
 
 ## Windows VMs
-[![Automate Ubuntu VM with Tekton Pipeline]
-(https://img.youtube.com/vi/IyhbxN2p474/0.jpg)]
-(https://www.youtube.com/watch?v=IyhbxN2p474)
+[![Automate Windows VM with Tekton Pipeline]
+(https://img.youtube.com/vi/IyhbxN2p474/0.jpg)](https://www.youtube.com/watch?v=IyhbxN2p474)
 
 ## Reference
 -   [OKD Docs](https://docs.okd.io/4.13/virt/about-virt.html)
