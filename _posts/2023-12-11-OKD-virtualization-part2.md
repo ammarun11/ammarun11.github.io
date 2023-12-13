@@ -74,7 +74,6 @@ Go to terminal or oc/kubectl client,
 ```
 
 oc create ns openinfra2023
-
 oc project openinfra2023
 
 # Ubuntu VM piplines
@@ -84,24 +83,23 @@ oc create -f https://raw.githubusercontent.com/ammarun11/kubevirt-tekton-pipelin
 ## Need Create ConfigMap unattend & sysprep for automate deployment for windows image
 
 oc create -f https://raw.githubusercontent.com/ammarun11/kubevirt-tekton-pipelines/main/examples/pipelines/okd/windows10/windows10-customize-sysprep.yaml
-
 oc create -f https://raw.githubusercontent.com/ammarun11/kubevirt-tekton-pipelines/main/examples/pipelines/okd/windows10/windows10-template-autounattend.yaml
 
 # Windows VM Template
 oc create -f https://raw.githubusercontent.com/ammarun11/kubevirt-tekton-pipelines/main/examples/pipelines/okd/windows10/windows10-template.yaml
-
 # Windows VM Customize
 oc create -f https://raw.githubusercontent.com/ammarun11/kubevirt-tekton-pipelines/main/examples/pipelines/okd/windows10/windows10-customize.yaml
 
 ```
 
-Results,
+# Results,
 ![image12](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/okd12.png)
 
 ![image13](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/okd13.png)
 
 For creating VMs will be on next part,
-[Next, Part 3](https://ammarun.my.id/ngoprek/server/cloud/kubernetes/openshift/okd/OKD-virtualization-part3/)
+
+[Next Part 3](https://ammarun.my.id/ngoprek/server/cloud/kubernetes/openshift/okd/OKD-virtualization-part3/)
 
 ## Reference
 -   [OKD Docs](https://docs.okd.io/4.13/virt/about-virt.html)

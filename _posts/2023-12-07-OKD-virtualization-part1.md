@@ -105,7 +105,7 @@ And here our nice VM is ready to goo ~
 
 ![image10](https://raw.githubusercontent.com/ammarun11/ammarun11.github.io/master/static/img/_posts/okd10.png)
 
-[Next, Part 2](https://ammarun.my.id/ngoprek/server/cloud/kubernetes/openshift/okd/OKD-virtualization-part2/)
+[Next Part 2](https://ammarun.my.id/ngoprek/server/cloud/kubernetes/openshift/okd/OKD-virtualization-part2/)
 
 ## Reference
 
